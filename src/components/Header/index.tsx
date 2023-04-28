@@ -9,10 +9,10 @@ export function Header() {
 
       <div>
         <ButtonLocation>
-          <MapPin size={22}/> Porto Alegre, RS
+          <MapPin size={22} weight="fill"/> Porto Alegre, RS
         </ButtonLocation>
         <ButtonBuy>
-          <ShoppingCart size={22}/>
+          <ShoppingCart size={22} weight="fill"/>
           <span>3</span>
         </ButtonBuy>
       </div>
