@@ -2,9 +2,18 @@ import { ButtonBuy, ButtonLocation, HeaderContainer, HeaderWrapper } from "./sty
 import coffeeDeliveryLogo from "../../assets/coffee-delivery-logo.svg"
 import { MapPin, ShoppingCart } from "phosphor-react"
 import { NavLink } from "react-router-dom"
+import { useContext } from 'react';
+import { CoffeesContexts } from "../../contexts/CoffeesContexts"
 
 export function Header() {
+  const { coffees } = useContext(CoffeesContexts)
+  let coffeesBuyeds = 0
   
+  coffees.forEach(coffee => {
+    coffeesBuyeds += Number(coffee.quantityBuyed)
+    
+  })
+
   return(
     <HeaderWrapper>
       <HeaderContainer>
@@ -20,7 +29,7 @@ export function Header() {
             <NavLink to="/checkout" title="Realizar e ver items comprados">
               <ShoppingCart size={22} weight="fill"/>
             </NavLink>
-            <span>3</span>
+            <span>{coffeesBuyeds}</span>
           </ButtonBuy>
         </div>
       </HeaderContainer>

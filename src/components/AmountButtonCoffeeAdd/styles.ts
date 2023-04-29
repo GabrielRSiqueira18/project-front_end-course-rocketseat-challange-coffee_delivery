@@ -17,24 +17,16 @@ export const ButtonMinusAndPlus = styled.span`
   
 `
 
-export const InputChoiceQuantityCoffees = styled.input`
+export const InputChoiceQuantityCoffees = styled.span`
   width: 1.5rem;
   height: 1.5rem;
   background-color: transparent;
   border: 0;
+  user-select: none;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   text-align: center;
-
-  &:focus {
-    outline: 0;
-  }
-
-  &::-webkit-outer-spin-button, &::-webkit-inner-spin-button{
-    -webkit-appearance: none;
-    margin: 0;
-  }
 `
