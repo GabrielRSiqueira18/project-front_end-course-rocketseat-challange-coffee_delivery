@@ -1,6 +1,7 @@
-import { AmountButtonCoffee, ButtonMinusAndPlus, ButtonToBuyCoffee, BuyAndPriceCoffeeContainer, CoffeeImgWrapper, CoffeeSingleContainer, InformationsAboutCoffeeContainer } from "./styles";
+import { AmountButtonCoffee, ButtonToBuyCoffee, BuyAndPriceCoffeeContainer, CoffeeImgWrapper, CoffeeSingleContainer, InformationsAboutCoffeeContainer } from "./styles";
 import coffee1 from "../../../../assets/coffee1.svg"
-import { Minus, Plus, ShoppingCartSimple } from "phosphor-react";
+import { ShoppingCartSimple } from "phosphor-react";
+import { AmountButtonCoffeeAdd } from "../../../../components/AmountButtonCoffeeAdd";
 
 export function CoffeeSingle() {
   return(
@@ -21,10 +22,10 @@ export function CoffeeSingle() {
       <BuyAndPriceCoffeeContainer>
         <h2><span>R$</span>9,90</h2>
 
-        <div>
-          <AmountButtonCoffee> <ButtonMinusAndPlus> <Minus size={32} weight="bold"/> </ButtonMinusAndPlus> 1  <ButtonMinusAndPlus> <Plus size={32} weight="bold"/> </ButtonMinusAndPlus> </AmountButtonCoffee>
-          <ButtonToBuyCoffee> <ShoppingCartSimple weight="fill" size={22}/> </ButtonToBuyCoffee>
-        </div>
+        <form>
+          <AmountButtonCoffee> <AmountButtonCoffeeAdd /> </AmountButtonCoffee>
+          <ButtonToBuyCoffee> <ShoppingCartSimple color="#FFFFFF" weight="fill" size={22}/> </ButtonToBuyCoffee>
+        </form>
       </BuyAndPriceCoffeeContainer>
 
     </CoffeeSingleContainer>

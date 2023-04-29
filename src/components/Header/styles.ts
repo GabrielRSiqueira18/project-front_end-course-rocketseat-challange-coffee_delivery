@@ -35,9 +35,19 @@ export const ButtonBuy = styled(BaseButtonHeader)`
   width: 2.375rem;
   cursor: pointer;
 
+  &:hover {
+    svg {
+      transition: 0.2s;
+      color: ${props => props.theme['yellow']};
+    }
+  }
+
   svg {
     position: relative;
     top: 6px;
+    color: ${props => props.theme['yellow-dark']};
+    
+    
   }
 
   span {

@@ -98,7 +98,7 @@ export const BuyAndPriceCoffeeContainer = styled.div`
     }
   }
 
-  div {
+  form {
     display: flex;
     gap: 0.5rem;
     justify-content: center;
@@ -115,33 +115,28 @@ export const BaseButtonToBuyCoffee = styled.button`
   border: 0;
 `
 
-export const AmountButtonCoffee = styled(BaseButtonToBuyCoffee)`
+export const AmountButtonCoffee = styled.div`
   background-color: ${props => props.theme["base-button"]};
   width: 4.5rem;
   display: flex;
   gap: 0.25rem;
   font-size: 1rem;
   font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 0;  
 `
 
 export const ButtonToBuyCoffee = styled(BaseButtonToBuyCoffee)`
   background-color: ${props => props.theme["purple-dark"]};
   cursor: pointer;
 
-  svg {
-    color: ${props => props.theme.white};
+  &:hover {
+    transition: 0.2s;
+    background-color: ${props => props.theme["purple"]};
   }
 `
 
-export const ButtonMinusAndPlus = styled.span`
-  width: 0.875rem;
-  height: 0.875rem;
-  color: ${props => props.theme["purple"]};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  cursor: pointer;
-
-  
-`

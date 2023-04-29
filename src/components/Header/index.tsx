@@ -9,7 +9,7 @@ export function Header() {
     <HeaderWrapper>
       <HeaderContainer>
         <NavLink to="/" title="Home">
-          <img src={ coffeeDeliveryLogo } title="Logo Coffee Delivery"/>
+          <img src={ coffeeDeliveryLogo } title="Home"/>
         </NavLink>
 
         <div>
@@ -18,7 +18,7 @@ export function Header() {
           </ButtonLocation>
           <ButtonBuy>
             <NavLink to="/checkout" title="Realizar e ver items comprados">
-              <ShoppingCart color='#C47F17' size={22} weight="fill"/>
+              <ShoppingCart size={22} weight="fill"/>
             </NavLink>
             <span>3</span>
           </ButtonBuy>
