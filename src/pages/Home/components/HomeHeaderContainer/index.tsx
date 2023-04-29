@@ -18,12 +18,12 @@ export function HomeHeaderContainer() {
               Compra simples e segura
             </VantageDeliverySingle>
 
-            <VantageDeliverySingle style={{ position: "relative", left: '4px' }}>
+            <VantageDeliverySingle style={{ position: "relative", left: '5px' }}>
                <VantageDeliverySpanCircle variant="baseText"> <p><Package size={16} weight="fill"/></p> </VantageDeliverySpanCircle>
                 Embalagem mantém o café intacto
               </VantageDeliverySingle>
 
-            <VantageDeliverySingle style={{ position: "relative", left: '6px' }}>
+            <VantageDeliverySingle style={{ position: "relative", left: '4px' }}>
                <VantageDeliverySpanCircle variant="yellow"> <p><Timer size={16} weight="fill"/></p> </VantageDeliverySpanCircle>
                 Entrega rápida e rastreada
               </VantageDeliverySingle>

@@ -1,5 +1,14 @@
+import { CheckoutFormInformationsAboutCoffees } from "./components/CheckoutFormInformationsAboutCoffees";
+import { CheckoutFormToFinishPurchase } from "./components/CheckoutFormToFinishPurchase";
+import { CheckoutContainer, CheckoutWrapper } from "./styles";
+
 export function Checkout() {
   return(
-    <h1>Checkout</h1>
+    <CheckoutContainer>
+      <CheckoutWrapper>
+        <CheckoutFormToFinishPurchase />
+        <CheckoutFormInformationsAboutCoffees />
+      </CheckoutWrapper>
+    </CheckoutContainer>
   )
 }

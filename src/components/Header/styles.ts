@@ -1,14 +1,21 @@
 import styled from "styled-components";
 
-export const HeaderContainer = styled.header`
-  padding: 2rem 2%;
+export const HeaderWrapper = styled.div`
+  width: 100%; 
+  position: fixed;
+  background-color: ${props => props.theme.background};
+  z-index: 999;
+`
 
+export const HeaderContainer = styled.header`
   display: flex;
+  padding: 2rem 2%;
   justify-content: space-between;
   align-items: center;
   max-width: calc(1440px + 2%);
   width: 100%;
   margin: 0 auto;
+  
 
   div {
     display: flex;

@@ -1,11 +1,36 @@
+import { CoffeeSingle } from "./components/CoffeeSingle";
 import { HomeHeaderContainer } from "./components/HomeHeaderContainer";
-import { HomeContainer } from "./styles";
+import { CoffeeWrapper, HomeContainer, HomeWrapper, MainContainer } from "./styles";
 
 
 export function Home() {
   return(
-    <HomeContainer>
-      <HomeHeaderContainer />
-    </HomeContainer>
+    <HomeWrapper>
+      <HomeContainer>
+        <HomeHeaderContainer />
+      </HomeContainer>
+      
+      <MainContainer>
+        <h2>Nossos cafés</h2>
+
+        <CoffeeWrapper>
+          <CoffeeSingle/>
+          <CoffeeSingle/>
+          <CoffeeSingle/>
+          <CoffeeSingle/>
+          <CoffeeSingle/>
+          <CoffeeSingle/>
+          <CoffeeSingle/>
+          <CoffeeSingle/>
+          <CoffeeSingle/>
+          <CoffeeSingle/>
+          <CoffeeSingle/>
+          <CoffeeSingle/>
+          <CoffeeSingle/>
+          <CoffeeSingle/>
+        </CoffeeWrapper>
+      </MainContainer>
+    </HomeWrapper>
+    
   )
 }

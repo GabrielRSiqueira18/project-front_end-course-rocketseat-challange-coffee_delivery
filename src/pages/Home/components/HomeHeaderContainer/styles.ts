@@ -7,8 +7,10 @@ export const HomeHeaderContainerComponent = styled.div`
   max-width: 1440px;
   display: flex;
   margin: 0 auto;
-  padding: 5.875rem 1%;
+  padding: 9.875rem 1%;
   gap: 3.5rem;
+  justify-content: center;
+  align-items: center;
 
   @media screen and (max-width: 1280px) {
     flex-wrap: wrap;
@@ -79,11 +81,16 @@ export const VantageDeliverySingle = styled.div`
   gap: 0.75rem;
 
   height: 2rem;
-
+  width: 20rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.3;
   color: ${props => props.theme["base-text"]};
+  font-family: 'Roboto';
+
+  @media screen and (max-width: 768px) {
+    width: auto;
+  }
 `
 
 type VantageDeliverySpanCircleVariant = 'yellow' | 'yellowDark' | 'purple' | 'baseText'
@@ -130,7 +137,7 @@ export const ImageHeaderWrapper = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1160px) {
     display: none;
   }
  
