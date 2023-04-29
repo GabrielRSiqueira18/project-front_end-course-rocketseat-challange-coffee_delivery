@@ -20,7 +20,7 @@ export function coffeesReducer(state: CoffeesState, action: any) {
           } 
           return coffee;
         }),
-        coffeesBuyeds: []
+        coffeesBuyeds: [...state.coffeesBuyeds]
       }
     }  
     
@@ -44,11 +44,58 @@ export function coffeesReducer(state: CoffeesState, action: any) {
           } 
           return coffee;
         }),
-        coffeesBuyeds: []
+        coffeesBuyeds: [...state.coffeesBuyeds]
       }
     }
 
+    case ActionTypes.ADD_COFFEE_TO_WALLET: {
+      const newBuyedCoffeeExists = state.coffeesBuyeds.find(coffe => coffe.id === action.payload.coffeeId)
+      
+      if(newBuyedCoffeeExists === undefined) {
+      return {
+        ...state,
+        coffees: state.coffees.map(coffee => {
+          if(coffee.id === action.payload.coffeeId) {
+            return {
+            ...coffee,
+            quantityBuyed: Number(coffee.quantityToBuy) + coffee.quantityBuyed,
+            quantityToBuy:  String(0),
+              
+            };
+          }
+          return coffee
+        }),
+        coffeesBuyeds: [ ...state.coffeesBuyeds, action.payload.newCoffeeBuyed ]
+      }
+     } else if(newBuyedCoffeeExists !== undefined) {
+      return {
+        ...state,
+        coffees: state.coffees.map(coffee => {
+          if(coffee.id === action.payload.coffeeId) {
+            return {
+            ...coffee,
+            quantityBuyed: Number(coffee.quantityToBuy) + coffee.quantityBuyed,
+            quantityToBuy:  String(0),
+              
+            };
+          }
+          return coffee
+        }),
+        coffeesBuyeds: state.coffeesBuyeds.map(coffee => {
+          if(coffee.id === action.payload.coffeeId) {
+            return {
+            ...coffee,
+              quantityBuyed: action.payload.newCoffeeBuyed.quantityBuyed 
+            };
+          } 
+          return coffee
+        })
+      }
+     }
+     return state
+    }
     default:
       return state
   }
+  
 }

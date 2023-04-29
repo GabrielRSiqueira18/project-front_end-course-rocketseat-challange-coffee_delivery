@@ -152,7 +152,7 @@ export const BuyAndPriceCoffeeContainer = styled.div`
     }
   }
 
-  form {
+  div {
     display: flex;
     gap: 0.5rem;
     justify-content: center;

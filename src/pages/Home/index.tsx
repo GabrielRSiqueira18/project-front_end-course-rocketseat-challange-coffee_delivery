@@ -1,14 +1,37 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { HomeHeaderContainer } from "./components/HomeHeaderContainer";
 import { AmountButtonCoffee, ButtonToBuyCoffee, BuyAndPriceCoffeeContainer, CoffeeImgWrapper, CoffeeSingleContainer, CoffeeWrapper, HomeContainer, HomeWrapper, InformationsAboutCoffeeContainer, MainContainer } from "./styles";
-import { CoffeesContexts } from "../../contexts/CoffeesContexts";
+import { Coffees, CoffeesBuyed, CoffeesContexts } from "../../contexts/CoffeesContexts";
 import { Minus, Plus, ShoppingCartSimple } from "phosphor-react";
 import { ButtonMinusAndPlus, InputChoiceQuantityCoffees } from "../../components/AmountButtonCoffeeAdd/styles";
 
 
 export function Home() {
 
-  const { coffees, decrementOneCoffee, incrementOneCoffee } = useContext(CoffeesContexts)
+  const { coffees, coffeesBuyeds, decrementOneCoffee, incrementOneCoffee, addCoffeesToWallet } = useContext(CoffeesContexts)
+
+  function handleBuyCoffee(coffeeId: number, coffeesItems: Coffees[]) {
+    coffeesItems.forEach(coffee => {
+      if(coffee.id === coffeeId) {
+        
+        const id = coffee.id
+        const name = coffee.name
+        const img = coffee.img
+        const value = coffee.value
+        const quantityBuyed = coffee.quantityBuyed
+
+        const newCoffeeBuyed: CoffeesBuyed = { 
+          id,
+          name,
+          img,
+          value,
+          quantityBuyed,
+        }
+        
+        addCoffeesToWallet(coffeeId, newCoffeeBuyed)
+      }
+    })
+  }
 
   return(
     <HomeWrapper>
@@ -46,7 +69,7 @@ export function Home() {
                 <BuyAndPriceCoffeeContainer>
                   <h2><span>R$</span>{correctValue}</h2>
           
-                  <form>
+                  <div>
                     <AmountButtonCoffee>
                        <ButtonMinusAndPlus>
                          <Minus
@@ -66,11 +89,14 @@ export function Home() {
                      </AmountButtonCoffee>
                     <ButtonToBuyCoffee>
                       <ShoppingCartSimple
+                        onClick={() => handleBuyCoffee(coffee.id, coffees)}
                         color="#FFFFFF"
                         weight="fill"
-                        size={22}/>
+                        size={22}
+                        type="button"
+                      />
                     </ButtonToBuyCoffee>
-                  </form>
+                  </div>
                 </BuyAndPriceCoffeeContainer>
           
               </CoffeeSingleContainer>
