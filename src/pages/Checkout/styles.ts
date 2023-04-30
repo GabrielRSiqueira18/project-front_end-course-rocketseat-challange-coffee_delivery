@@ -19,4 +19,6 @@ export const CheckoutWrapper = styled.div`
   display: flex;
   gap: 2rem;
   width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
 `
