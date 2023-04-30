@@ -6,11 +6,14 @@ import { useContext } from 'react';
 import { CoffeesContexts } from "../../contexts/CoffeesContexts"
 
 export function Header() {
-  const { coffees } = useContext(CoffeesContexts)
-  let coffeesBuyeds = 0
+  const { coffees, coffeesBuyeds } = useContext(CoffeesContexts)
+
+  const buttonNavigateIsDisabled = coffeesBuyeds.length === 0
+
+  let coffeesBuyedsRuduce = 0
   
   coffees.forEach(coffee => {
-    coffeesBuyeds += Number(coffee.quantityBuyed)
+    coffeesBuyedsRuduce += Number(coffee.quantityBuyed)
     
   })
 
@@ -25,11 +28,14 @@ export function Header() {
           <ButtonLocation>
             <MapPin size={22} weight="fill"/> Porto Alegre, RS
           </ButtonLocation>
-          <ButtonBuy>
-            <NavLink to="/checkout" title="Realizar e ver items comprados">
+          <ButtonBuy disabled={buttonNavigateIsDisabled}>
+            { coffeesBuyeds.length === 0 ? <ShoppingCart size={22} weight="fill"/> : (
+              <NavLink to="/checkout" title="Realizar e ver items comprados">
               <ShoppingCart size={22} weight="fill"/>
             </NavLink>
-            <span>{coffeesBuyeds}</span>
+            ) }
+            
+            <span>{coffeesBuyedsRuduce}</span>
           </ButtonBuy>
         </div>
       </HeaderContainer>

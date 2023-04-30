@@ -1,13 +1,28 @@
+import { useContext } from "react";
 import { CoffeeBuyedsInformationsSingle } from "./components/CoffeeBuyedsInformationsSingle";
 import { CheckoutFormInformationsAboutCoffeesContainer, CheckoutFormInformationsAboutCoffeesWrapper, TitleCheckoutInformations } from "./styles";
+import { CoffeesContexts } from "../../../../contexts/CoffeesContexts";
 
 export function CheckoutFormInformationsAboutCoffees() {
+  const { coffeesBuyeds } = useContext(CoffeesContexts)
+
   return(
     <CheckoutFormInformationsAboutCoffeesContainer>
       <TitleCheckoutInformations>Cafés selecionados</TitleCheckoutInformations>
 
       <CheckoutFormInformationsAboutCoffeesWrapper>
-        <CoffeeBuyedsInformationsSingle />
+        
+        { coffeesBuyeds.map(coffee => {
+          return(
+            <CoffeeBuyedsInformationsSingle
+              key={coffee.id}
+              img={coffee.img}
+              name={coffee.name}
+              quantityBuyed={coffee.quantityBuyed}
+              value={coffee.value}
+            />
+          )
+        }) }
       </CheckoutFormInformationsAboutCoffeesWrapper>
     </CheckoutFormInformationsAboutCoffeesContainer>
   )

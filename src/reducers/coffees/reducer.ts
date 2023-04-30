@@ -7,6 +7,8 @@ export interface CoffeesState {
 }
 
 export function coffeesReducer(state: CoffeesState, action: any) {
+  
+
   switch(action.type) {
     case ActionTypes.iNCREMENT_ONE_IN_QUANTITY_COFFEE: {
       return {
@@ -66,6 +68,7 @@ export function coffeesReducer(state: CoffeesState, action: any) {
           return coffee
         }),
         coffeesBuyeds: [ ...state.coffeesBuyeds, action.payload.newCoffeeBuyed ]
+        
       }
      } else if(newBuyedCoffeeExists !== undefined) {
       return {

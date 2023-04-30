@@ -1,23 +1,31 @@
-import { CoffeeBuyedInformationsMain, CoffeeBuyedInformationsWrapper, CoffeeBuyedsInformationsSingleContainer, RemoveButton } from "./styles";
-import coffeeImg from "../../../../../../assets/coffee1.svg"
-import { AmountButtonCoffeeAdd } from "../../../../../../components/AmountButtonCoffeeAdd";
-import { Trash } from "phosphor-react";
+import { CoffeeButtonQuantityBuyed, CoffeeButtonRemoveBuyed, CoffeeBuyedsInformationsSingleContainer, CoffeeInformationsWithoutPrice, CoffeeInformationsWithoutPriceWrapper, PriceCoffee } from "./styles";
+import { Minus, Plus, Trash } from "phosphor-react";
 
+interface CoffeeBuyedsInformationsSingle {
+  name: string
+  img: string
+  value: number
+  quantityBuyed: number
+}
 
-export function CoffeeBuyedsInformationsSingle() {
+export function CoffeeBuyedsInformationsSingle({ name, img, value, quantityBuyed }: CoffeeBuyedsInformationsSingle) {
   return(
     <CoffeeBuyedsInformationsSingleContainer>
-      <CoffeeBuyedInformationsWrapper>
-        <img src={coffeeImg} alt="" />
-        <CoffeeBuyedInformationsMain>
-          <h2>Expresso Tradicional</h2>
+      <CoffeeInformationsWithoutPrice>
+        <img src={ img } alt="" />
+        <CoffeeInformationsWithoutPriceWrapper>
+          <h2>{name}</h2>
           <div>
-            <AmountButtonCoffeeAdd/>
-            <RemoveButton> <Trash color="#8047F8" /> Remover</RemoveButton>
+            <CoffeeButtonQuantityBuyed> <Minus size={12} weight="bold"/> {quantityBuyed} <Plus size={12} weight="bold"/> </CoffeeButtonQuantityBuyed>
+            <CoffeeButtonRemoveBuyed> <Trash size={16}/> <span>remover</span> </CoffeeButtonRemoveBuyed>
           </div>
-        </CoffeeBuyedInformationsMain>
-      </CoffeeBuyedInformationsWrapper>
-      <h2>9,90</h2>
+          
+        </CoffeeInformationsWithoutPriceWrapper>
+        <PriceCoffee>R$ {value}</PriceCoffee>
+      </CoffeeInformationsWithoutPrice>
+      
     </CoffeeBuyedsInformationsSingleContainer>
   )
+
+  //<ButtonMinusAndPlus> <Minus size={32} weight="bold"/> </ButtonMinusAndPlus> <InputChoiceQuantityCoffees>2</InputChoiceQuantityCoffees>  <ButtonMinusAndPlus> <Plus size={32} weight="bold"/> </ButtonMinusAndPlus>
 } 

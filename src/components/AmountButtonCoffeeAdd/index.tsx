@@ -4,7 +4,7 @@ import { ButtonMinusAndPlus, InputChoiceQuantityCoffees } from "./styles";
 export function AmountButtonCoffeeAdd() {
   return (
     <>
-      <ButtonMinusAndPlus> <Minus size={32} weight="bold"/> </ButtonMinusAndPlus> <InputChoiceQuantityCoffees step={1} max={99} min={1} type="number" />  <ButtonMinusAndPlus> <Plus size={32} weight="bold"/> </ButtonMinusAndPlus>
+      <ButtonMinusAndPlus> <Minus size={32} weight="bold"/> </ButtonMinusAndPlus> <InputChoiceQuantityCoffees>2</InputChoiceQuantityCoffees>  <ButtonMinusAndPlus> <Plus size={32} weight="bold"/> </ButtonMinusAndPlus>
     </>
   )
 }

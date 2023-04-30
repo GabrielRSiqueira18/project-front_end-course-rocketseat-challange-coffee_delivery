@@ -35,6 +35,10 @@ export const ButtonBuy = styled(BaseButtonHeader)`
   width: 2.375rem;
   cursor: pointer;
 
+  &:disabled {
+    cursor: default;
+  }
+
   &:hover {
     svg {
       transition: 0.2s;

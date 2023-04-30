@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { HomeHeaderContainer } from "./components/HomeHeaderContainer";
 import { AmountButtonCoffee, ButtonToBuyCoffee, BuyAndPriceCoffeeContainer, CoffeeImgWrapper, CoffeeSingleContainer, CoffeeWrapper, HomeContainer, HomeWrapper, InformationsAboutCoffeeContainer, MainContainer } from "./styles";
 import { Coffees, CoffeesBuyed, CoffeesContexts } from "../../contexts/CoffeesContexts";
@@ -8,7 +8,7 @@ import { ButtonMinusAndPlus, InputChoiceQuantityCoffees } from "../../components
 
 export function Home() {
 
-  const { coffees, coffeesBuyeds, decrementOneCoffee, incrementOneCoffee, addCoffeesToWallet } = useContext(CoffeesContexts)
+  const { coffees, decrementOneCoffee, incrementOneCoffee, addCoffeesToWallet } = useContext(CoffeesContexts)
 
   function handleBuyCoffee(coffeeId: number, coffeesItems: Coffees[]) {
     coffeesItems.forEach(coffee => {
