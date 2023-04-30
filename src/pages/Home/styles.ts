@@ -79,6 +79,7 @@ export const CoffeeImgWrapper = styled.div`
   img {
     width: 8rem;
     user-select: none;
+    margin: 0 auto;
   }
 
   div {

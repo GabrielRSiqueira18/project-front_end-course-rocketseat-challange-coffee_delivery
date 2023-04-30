@@ -11,7 +11,8 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${props => props.theme['background']};
     color: ${props => props.theme["base-text"]};
     scroll-behavior: smooth;
-    
+    overflow-x: hidden;
+
     &::-webkit-scrollbar {
     width: 10px; 
     }
@@ -25,5 +26,12 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${props => props.theme["purple-dark"]}; 
     }
   }
+
   
+  @media screen and (max-width: 768px) {
+    html {
+      font-size: 12px;
+    }
+  }
 `
+

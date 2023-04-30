@@ -28,7 +28,7 @@ export function CheckoutFormInformationsAboutCoffees() {
 
   return(
     <CheckoutFormInformationsAboutCoffeesContainer>
-      <TitleCheckoutInformations>Cafés selecionados</TitleCheckoutInformations>
+      <TitleCheckoutInformations>Cafés</TitleCheckoutInformations>
 
       <CheckoutFormInformationsAboutCoffeesWrapper>
         <CheckoutFormInformationsContainerToPutScrollBar>

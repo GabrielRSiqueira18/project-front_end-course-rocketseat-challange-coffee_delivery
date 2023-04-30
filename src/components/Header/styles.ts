@@ -5,6 +5,11 @@ export const HeaderWrapper = styled.div`
   position: fixed;
   background-color: ${props => props.theme.background};
   z-index: 999;
+  
+  @media screen and (max-width: 768px) {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
 `
 
 export const HeaderContainer = styled.header`
@@ -29,30 +34,38 @@ export const BaseButtonHeader = styled.button`
   border-radius: 6px;
 `
 
+export const ShoppingCartContainer = styled.div`
+  display: flex;
+`
+
 export const ButtonBuy = styled(BaseButtonHeader)`
   color: ${props => props.theme["yellow-dark"]};
   background-color: ${props => props.theme["yellow-light"]};
   width: 2.375rem;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  &:disabled {
-    cursor: default;
+  svg {
+    color: ${props => props.theme['yellow-dark']};
   }
 
-  &:hover {
+  a {
+    text-decoration: none;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &:not(:disabled):hover {
     svg {
       transition: 0.2s;
       color: ${props => props.theme['yellow']};
     }
   }
 
-  svg {
-    position: relative;
-    top: 6px;
-    color: ${props => props.theme['yellow-dark']};
-    
-    
-  }
 
   span {
     position: relative;
@@ -88,4 +101,24 @@ export const ButtonLocation = styled(BaseButtonHeader)`
   justify-content: center;
   align-items: center;
   gap: 0.25rem;
+`
+
+export const NumberOfCoffeesBuyeds = styled.span`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  position: absolute;
+  transform: translate(1.875rem, -0.46875rem);
+  background-color: ${props => props.theme["yellow-dark"]};
+  
+  border-radius: 50%;
+
+  width: 1.25rem;
+  height: 1.25rem;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: "Roboto";
+  color: ${props => props.theme["white"]};
 `

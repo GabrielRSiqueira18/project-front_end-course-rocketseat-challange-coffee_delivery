@@ -1,4 +1,4 @@
-import { ButtonBuy, ButtonLocation, HeaderContainer, HeaderWrapper } from "./styles"
+import { ButtonBuy, ButtonLocation, HeaderContainer, HeaderWrapper, NumberOfCoffeesBuyeds, ShoppingCartContainer } from "./styles"
 import coffeeDeliveryLogo from "../../assets/coffee-delivery-logo.svg"
 import { MapPin, ShoppingCart } from "phosphor-react"
 import { NavLink } from "react-router-dom"
@@ -10,7 +10,7 @@ export function Header() {
 
   const buttonNavigateIsDisabled = coffeesBuyeds.length === 0
 
-   let coffeesBuyedsReduce = 0
+  let coffeesBuyedsReduce = 0
   
   coffees.forEach(coffee => {
     coffeesBuyedsReduce += Number(coffee.quantityBuyed)
@@ -28,19 +28,24 @@ export function Header() {
           <ButtonLocation>
             <MapPin size={22} weight="fill"/> Porto Alegre, RS
           </ButtonLocation>
-          <ButtonBuy disabled={buttonNavigateIsDisabled}>
-            { coffeesBuyeds.length === 0 ? <ShoppingCart style={{ top: '0' }} size={22} weight="fill"/> : (
-              <NavLink to="/checkout" title="Realizar e ver items comprados">
-              <ShoppingCart size={22} weight="fill"/>
-            </NavLink>
-            ) }
+          <ShoppingCartContainer>
             
-            { coffeesBuyedsReduce === 0 ? (
-              <span style={{ display: 'none' }}></span>
-            ) :(
-              <span>{coffeesBuyedsReduce}</span>
+            <ButtonBuy disabled={buttonNavigateIsDisabled}>
+              { coffeesBuyeds.length === 0 ? (
+                <ShoppingCart size={22} weight="fill"/>
+              ) : (
+                <NavLink to={"/checkout"}>
+                  <ShoppingCart size={22} weight="fill"/>
+                </NavLink>
+              ) }
+            </ButtonBuy>
+            { coffeesBuyeds.length === 0 ? (
+              <span></span>
+            ) : (
+              <NumberOfCoffeesBuyeds>{ coffeesBuyedsReduce }</NumberOfCoffeesBuyeds>
             ) }
-          </ButtonBuy>
+          </ShoppingCartContainer>
+          
         </div>
       </HeaderContainer>
     </HeaderWrapper>
