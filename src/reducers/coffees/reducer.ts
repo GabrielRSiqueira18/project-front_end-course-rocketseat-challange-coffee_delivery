@@ -91,8 +91,8 @@ export function coffeesReducer(state: CoffeesState, action: any) {
     case ActionTypes.REMOVE_COFFEE_IN_WALLET: {
       return produce(state, draft => {
         draft.coffeesBuyeds.splice(coffeeBuyedTargetIndex, 1)
-        draft.coffees.splice(coffeeTargetIndex, 1)
-
+        draft.coffees[coffeeTargetIndex].quantityBuyed = 0
+        draft.coffees[coffeeTargetIndex].quantityToBuy = String(0)
       })
     }
 

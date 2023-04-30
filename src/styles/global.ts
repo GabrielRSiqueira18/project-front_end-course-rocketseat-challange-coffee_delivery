@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     background-color: ${props => props.theme['background']};
     color: ${props => props.theme["base-text"]};
+    scroll-behavior: smooth;
 
     &::-webkit-scrollbar {
     width: 10px; 
