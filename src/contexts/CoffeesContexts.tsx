@@ -1,7 +1,7 @@
 import { ReactNode, createContext, useReducer } from "react";
 import { initialCoffees } from "./initialValuesCofees";
 import { coffeesReducer } from "../reducers/coffees/reducer";
-import { AddCoffeesToWalletAction, decrementOneCoffeeAction, incrementOneCoffeeAction } from "../reducers/coffees/actions";
+import { AddCoffeesToWalletAction, decrementCoffeesToBuyedAction, decrementOneCoffeeAction, incrementCoffeesToBuyedAction, incrementOneCoffeeAction } from "../reducers/coffees/actions";
 
 interface CoffeesContextsProviderProps {
   children: ReactNode
@@ -33,6 +33,8 @@ interface CoffeesContextsType {
   incrementOneCoffee: (coffeeId: number) => void
   decrementOneCoffee: (coffeeId: number) => void
   addCoffeesToWallet: (coffeeId: number, newCoffeeBuyed: CoffeesBuyed) => void
+  incrementOneCoffeeBuyed: (coffeeId: number) => void
+  decrementOneCoffeeBuyed: (coffeeId: number) => void 
 }
 
 const initialState = {
@@ -58,12 +60,22 @@ export function CoffeesContextsProvider({ children }: CoffeesContextsProviderPro
     
   }
 
+  function incrementOneCoffeeBuyed(coffeeId: number) {
+    dispatch(incrementCoffeesToBuyedAction(coffeeId))
+    
+  }
+
+  function decrementOneCoffeeBuyed(coffeeId: number) {
+    dispatch(decrementCoffeesToBuyedAction(coffeeId))
+    
+  }
+
   function addCoffeesToWallet(coffeeId: number, newCoffeeBuyed: CoffeesBuyed) {
     dispatch(AddCoffeesToWalletAction(coffeeId, newCoffeeBuyed))
   }
 
   return(
-    <CoffeesContexts.Provider value={{ coffees, coffeesBuyeds, incrementOneCoffee, decrementOneCoffee, addCoffeesToWallet }}>
+    <CoffeesContexts.Provider value={{ coffees, coffeesBuyeds, incrementOneCoffee, decrementOneCoffee, addCoffeesToWallet,incrementOneCoffeeBuyed, decrementOneCoffeeBuyed }}>
       { children }
     </CoffeesContexts.Provider>
   )

@@ -12,7 +12,7 @@ export function coffeesReducer(state: CoffeesState, action: any) {
   const coffeeBuyedTargetIndex = state.coffeesBuyeds.findIndex(coffee => coffee.id === action.payload.coffeeId)
   
   switch(action.type) {
-    case ActionTypes.iNCREMENT_ONE_IN_QUANTITY_COFFEE: {
+    case ActionTypes.INCREMENT_ONE_IN_QUANTITY_COFFEE: {
       if(coffeeTargetIndex < 0) {
         return state
       }
@@ -64,7 +64,31 @@ export function coffeesReducer(state: CoffeesState, action: any) {
         }
       })
     }
-    
+    case ActionTypes.INCREMENT_ONE_IN_COFFEE_TO_BUYED: {
+      return produce(state, draft => {
+        draft.coffees[coffeeTargetIndex].quantityBuyed = state.coffees[coffeeTargetIndex].quantityBuyed + 1
+        draft.coffeesBuyeds[coffeeBuyedTargetIndex].quantityBuyed = draft.coffeesBuyeds[coffeeBuyedTargetIndex].quantityBuyed += 1
+      })
+    }
+
+    case ActionTypes.DECREMENT_ONE_IN_COFFEE_TO_BUYED: {
+      return produce(state, draft => {
+        if(draft.coffees[coffeeTargetIndex].quantityBuyed === 0) {
+          draft.coffees[coffeeTargetIndex].quantityBuyed = 0
+          
+        } else {
+          draft.coffees[coffeeTargetIndex].quantityBuyed = state.coffees[coffeeTargetIndex].quantityBuyed - 1
+          
+          if(draft.coffeesBuyeds[coffeeBuyedTargetIndex].quantityBuyed === 0) {
+            draft.coffeesBuyeds[coffeeBuyedTargetIndex].quantityBuyed = 0
+          } else {
+            draft.coffeesBuyeds[coffeeBuyedTargetIndex].quantityBuyed -= 1
+          }
+        }
+        
+      })
+    }
+
     default:
       return state
   }

@@ -3,14 +3,16 @@ import { CoffeesBuyed } from "../../contexts/CoffeesContexts"
 
 
 export enum ActionTypes {
-  iNCREMENT_ONE_IN_QUANTITY_COFFEE = 'ADD_ONE_IN_QUANTITY_COFFEE',
+  INCREMENT_ONE_IN_QUANTITY_COFFEE = 'ADD_ONE_IN_QUANTITY_COFFEE',
   DECREMENT_ONE_IN_QUANTITY_COFFEE = 'DECREMENT_ONE_IN_QUANTITY_COFFEE',
   ADD_COFFEE_TO_WALLET = 'ADD_COFFEE_TO_WALLET',
+  INCREMENT_ONE_IN_COFFEE_TO_BUYED = 'INCREMENT_ONE_IN_COFFEE_TO_BUYED',
+  DECREMENT_ONE_IN_COFFEE_TO_BUYED = 'DECREMENT_ONE_IN_COFFEE_TO_BUYED',
 }
 
 export function incrementOneCoffeeAction(coffeeId: number) {
   return {
-    type: ActionTypes.iNCREMENT_ONE_IN_QUANTITY_COFFEE,
+    type: ActionTypes.INCREMENT_ONE_IN_QUANTITY_COFFEE,
 
     payload: {
       coffeeId,
@@ -38,6 +40,26 @@ export function AddCoffeesToWalletAction(coffeeId: number, newCoffeeBuyed: Coffe
       newCoffeeBuyed,
     }
   }
+}
+
+export function incrementCoffeesToBuyedAction(coffeeId: number) {
   
+  return {
+    type: ActionTypes.INCREMENT_ONE_IN_COFFEE_TO_BUYED,
+
+    payload: {
+      coffeeId,
+    }
+  }
+}
+
+export function decrementCoffeesToBuyedAction(coffeeId: number) {
   
+  return {
+    type: ActionTypes.DECREMENT_ONE_IN_COFFEE_TO_BUYED,
+
+    payload: {
+      coffeeId,
+    }
+  }
 }

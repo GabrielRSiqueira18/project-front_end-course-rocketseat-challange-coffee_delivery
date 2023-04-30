@@ -1,26 +1,49 @@
 import { useContext } from "react";
-import { CoffeeBuyedsInformationsSingle } from "./components/CoffeeBuyedsInformationsSingle";
-import { CheckoutFormInformationsAboutCoffeesContainer, CheckoutFormInformationsAboutCoffeesWrapper, CheckoutFormInformationsContainerToPutScrollBar as CheckoutFormInformationsContainerToPutScrollBar, TitleCheckoutInformations } from "./styles";
+import { CheckoutFormInformationsAboutCoffeesContainer, CheckoutFormInformationsAboutCoffeesWrapper, CheckoutFormInformationsContainerToPutScrollBar as CheckoutFormInformationsContainerToPutScrollBar, CoffeeButtonQuantityBuyed, CoffeeButtonRemoveBuyed, CoffeeBuyedsInformationsSingleContainer, CoffeeInformationsWithoutPrice, CoffeeInformationsWithoutPriceWrapper, PriceCoffee, TitleCheckoutInformations } from "./styles";
 import { CoffeesContexts } from "../../../../contexts/CoffeesContexts";
+import { Minus, Plus, Trash } from "phosphor-react";
+import { convertValueToCorrect } from "../../../Home";
 
 export function CheckoutFormInformationsAboutCoffees() {
-  const { coffeesBuyeds } = useContext(CoffeesContexts)
+  const { coffeesBuyeds, incrementOneCoffeeBuyed, decrementOneCoffeeBuyed } = useContext(CoffeesContexts)
 
-  return(
+   return(
     <CheckoutFormInformationsAboutCoffeesContainer>
       <TitleCheckoutInformations>Cafés selecionados</TitleCheckoutInformations>
 
       <CheckoutFormInformationsAboutCoffeesWrapper>
         <CheckoutFormInformationsContainerToPutScrollBar>
           { coffeesBuyeds.map(coffee => {
+            const correctValue = convertValueToCorrect(coffee.value)
+
             return(
-              <CoffeeBuyedsInformationsSingle
-                key={coffee.id}
-                img={coffee.img}
-                name={coffee.name}
-                quantityBuyed={coffee.quantityBuyed}
-                value={coffee.value}
-              />
+              <CoffeeBuyedsInformationsSingleContainer key={coffee.id}>
+                <CoffeeInformationsWithoutPrice>
+                  <img src={ coffee.img } alt="" />
+                  <CoffeeInformationsWithoutPriceWrapper>
+                    <h2>{coffee.name}</h2>
+                    <div>
+                      <CoffeeButtonQuantityBuyed>
+                        <Minus
+                          onClick={() => decrementOneCoffeeBuyed(coffee.id)}  
+                          size={12}
+                          weight="bold"
+                        /> 
+                        {coffee.quantityBuyed} 
+                        <Plus
+                          onClick={() => incrementOneCoffeeBuyed(coffee.id)}  
+                          size={12} 
+                          weight="bold"
+                        /> 
+                      </CoffeeButtonQuantityBuyed>
+                      <CoffeeButtonRemoveBuyed> <Trash size={16}/> <span>remover</span> </CoffeeButtonRemoveBuyed>
+                    </div>
+                    
+                  </CoffeeInformationsWithoutPriceWrapper>
+                  <PriceCoffee>R$ {correctValue}</PriceCoffee>
+                </CoffeeInformationsWithoutPrice>
+      
+               </CoffeeBuyedsInformationsSingleContainer>
             )
           }) }
         </CheckoutFormInformationsContainerToPutScrollBar>
