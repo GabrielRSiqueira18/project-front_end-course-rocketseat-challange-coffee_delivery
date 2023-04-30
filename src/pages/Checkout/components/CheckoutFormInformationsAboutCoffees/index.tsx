@@ -5,7 +5,7 @@ import { Minus, Plus, Trash } from "phosphor-react";
 import { convertValueToCorrect } from "../../../Home";
 
 export function CheckoutFormInformationsAboutCoffees() {
-  const { coffeesBuyeds, incrementOneCoffeeBuyed, decrementOneCoffeeBuyed } = useContext(CoffeesContexts)
+  const { coffeesBuyeds, incrementOneCoffeeBuyed, decrementOneCoffeeBuyed, removeCoffeeInWallet } = useContext(CoffeesContexts)
 
    return(
     <CheckoutFormInformationsAboutCoffeesContainer>
@@ -36,7 +36,12 @@ export function CheckoutFormInformationsAboutCoffees() {
                           weight="bold"
                         /> 
                       </CoffeeButtonQuantityBuyed>
-                      <CoffeeButtonRemoveBuyed> <Trash size={16}/> <span>remover</span> </CoffeeButtonRemoveBuyed>
+                      <CoffeeButtonRemoveBuyed onClick={() => removeCoffeeInWallet(coffee.id)}>
+                          <Trash 
+                            size={16}
+                          /> 
+                          <span>remover</span>
+                        </CoffeeButtonRemoveBuyed>
                     </div>
                     
                   </CoffeeInformationsWithoutPriceWrapper>
