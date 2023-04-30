@@ -15,7 +15,7 @@ export function Router() {
 
   return(
     <Routes>
-      <Route path="/" element={<DefaultLayout />} >
+      <Route path="/coffee-delivery-desafio-2" element={<DefaultLayout />} >
         <Route path="/coffee-delivery-desafio-2" element={<Home />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/checkout-filled" element={<CheckoutFilled />} />
