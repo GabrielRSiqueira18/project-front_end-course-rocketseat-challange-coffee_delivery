@@ -9,14 +9,14 @@ export function Router() {
   const navigate = useNavigate()
   
   useEffect(() => {
-    navigate("/coffee-delivery-desafio-2");
+    navigate("/");
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return(
     <Routes>
       <Route path="/" element={<DefaultLayout />} >
-        <Route path="/coffee-delivery-desafio-2" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/checkout-filled" element={<CheckoutFilled />} />
       </Route>
