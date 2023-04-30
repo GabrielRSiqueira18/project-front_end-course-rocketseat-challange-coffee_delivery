@@ -4,7 +4,16 @@ import { AmountButtonCoffee, ButtonToBuyCoffee, BuyAndPriceCoffeeContainer, Coff
 import { Coffees, CoffeesBuyed, CoffeesContexts } from "../../contexts/CoffeesContexts";
 import { Minus, Plus, ShoppingCartSimple } from "phosphor-react";
 import { ButtonMinusAndPlus, InputChoiceQuantityCoffees } from "../../components/AmountButtonCoffeeAdd/styles";
+ 
+export function convertValueToCorrect(value: number) {
+  const valueString = value.toString()
+  const valueSplited = valueString.split('')
+  valueSplited[1] = ','
+  valueSplited.push('0')
+  const correctValue = valueSplited.join('')
 
+  return correctValue
+}
 
 export function Home() {
 
@@ -18,7 +27,7 @@ export function Home() {
         const name = coffee.name
         const img = coffee.img
         const value = coffee.value
-        const quantityBuyed = coffee.quantityBuyed
+        const quantityBuyed = Number(coffee.quantityToBuy) + coffee.quantityBuyed
 
         const newCoffeeBuyed: CoffeesBuyed = { 
           id,
@@ -44,12 +53,8 @@ export function Home() {
 
         <CoffeeWrapper>
           {coffees.map((coffee) => {
-            const valueString = coffee.value.toString()
-            const valueSplited = valueString.split('')
-            valueSplited[1] = ','
-            valueSplited.push('0')
-            const correctValue = valueSplited.join('')
-
+            
+            const correctValue = convertValueToCorrect(coffee.value)
             return(
               <CoffeeSingleContainer key={coffee.id}>
                 <CoffeeImgWrapper>

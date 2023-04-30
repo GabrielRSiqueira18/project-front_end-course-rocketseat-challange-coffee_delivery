@@ -1,3 +1,4 @@
+import { convertValueToCorrect } from "../../../../../Home";
 import { CoffeeButtonQuantityBuyed, CoffeeButtonRemoveBuyed, CoffeeBuyedsInformationsSingleContainer, CoffeeInformationsWithoutPrice, CoffeeInformationsWithoutPriceWrapper, PriceCoffee } from "./styles";
 import { Minus, Plus, Trash } from "phosphor-react";
 
@@ -9,6 +10,8 @@ interface CoffeeBuyedsInformationsSingle {
 }
 
 export function CoffeeBuyedsInformationsSingle({ name, img, value, quantityBuyed }: CoffeeBuyedsInformationsSingle) {
+  const correctValue = convertValueToCorrect(value)
+
   return(
     <CoffeeBuyedsInformationsSingleContainer>
       <CoffeeInformationsWithoutPrice>
@@ -21,7 +24,7 @@ export function CoffeeBuyedsInformationsSingle({ name, img, value, quantityBuyed
           </div>
           
         </CoffeeInformationsWithoutPriceWrapper>
-        <PriceCoffee>R$ {value}</PriceCoffee>
+        <PriceCoffee>R$ {correctValue}</PriceCoffee>
       </CoffeeInformationsWithoutPrice>
       
     </CoffeeBuyedsInformationsSingleContainer>

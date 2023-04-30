@@ -10,10 +10,10 @@ export function Header() {
 
   const buttonNavigateIsDisabled = coffeesBuyeds.length === 0
 
-  let coffeesBuyedsRuduce = 0
+   let coffeesBuyedsReduce = 0
   
   coffees.forEach(coffee => {
-    coffeesBuyedsRuduce += Number(coffee.quantityBuyed)
+    coffeesBuyedsReduce += Number(coffee.quantityBuyed)
     
   })
 
@@ -29,13 +29,17 @@ export function Header() {
             <MapPin size={22} weight="fill"/> Porto Alegre, RS
           </ButtonLocation>
           <ButtonBuy disabled={buttonNavigateIsDisabled}>
-            { coffeesBuyeds.length === 0 ? <ShoppingCart size={22} weight="fill"/> : (
+            { coffeesBuyeds.length === 0 ? <ShoppingCart style={{ top: '0' }} size={22} weight="fill"/> : (
               <NavLink to="/checkout" title="Realizar e ver items comprados">
               <ShoppingCart size={22} weight="fill"/>
             </NavLink>
             ) }
             
-            <span>{coffeesBuyedsRuduce}</span>
+            { coffeesBuyedsReduce === 0 ? (
+              <span style={{ display: 'none' }}></span>
+            ) :(
+              <span>{coffeesBuyedsReduce}</span>
+            ) }
           </ButtonBuy>
         </div>
       </HeaderContainer>

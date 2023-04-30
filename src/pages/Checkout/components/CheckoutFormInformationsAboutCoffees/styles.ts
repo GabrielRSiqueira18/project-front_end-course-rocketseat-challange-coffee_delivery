@@ -27,4 +27,28 @@ export const CheckoutFormInformationsAboutCoffeesWrapper = styled.div`
   border-radius: 6px 44px;
   border: 1px solid #000000;
   background-color: ${props => props.theme["base-card"]};
+
+  
+
+  
+
+`
+
+export const CheckoutFormInformationsContainerToPutScrollBar = styled.div`
+  height: 28rem;
+
+  overflow: auto;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 8px; 
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: ${props => props.theme["purple"]}; 
+    border-radius: 6px; 
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: ${props => props.theme["purple-dark"]}; 
+  }
 `

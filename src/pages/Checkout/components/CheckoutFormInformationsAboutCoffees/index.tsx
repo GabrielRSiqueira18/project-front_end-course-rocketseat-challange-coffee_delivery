@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { CoffeeBuyedsInformationsSingle } from "./components/CoffeeBuyedsInformationsSingle";
-import { CheckoutFormInformationsAboutCoffeesContainer, CheckoutFormInformationsAboutCoffeesWrapper, TitleCheckoutInformations } from "./styles";
+import { CheckoutFormInformationsAboutCoffeesContainer, CheckoutFormInformationsAboutCoffeesWrapper, CheckoutFormInformationsContainerToPutScrollBar as CheckoutFormInformationsContainerToPutScrollBar, TitleCheckoutInformations } from "./styles";
 import { CoffeesContexts } from "../../../../contexts/CoffeesContexts";
 
 export function CheckoutFormInformationsAboutCoffees() {
@@ -11,18 +11,20 @@ export function CheckoutFormInformationsAboutCoffees() {
       <TitleCheckoutInformations>Cafés selecionados</TitleCheckoutInformations>
 
       <CheckoutFormInformationsAboutCoffeesWrapper>
+        <CheckoutFormInformationsContainerToPutScrollBar>
+          { coffeesBuyeds.map(coffee => {
+            return(
+              <CoffeeBuyedsInformationsSingle
+                key={coffee.id}
+                img={coffee.img}
+                name={coffee.name}
+                quantityBuyed={coffee.quantityBuyed}
+                value={coffee.value}
+              />
+            )
+          }) }
+        </CheckoutFormInformationsContainerToPutScrollBar>
         
-        { coffeesBuyeds.map(coffee => {
-          return(
-            <CoffeeBuyedsInformationsSingle
-              key={coffee.id}
-              img={coffee.img}
-              name={coffee.name}
-              quantityBuyed={coffee.quantityBuyed}
-              value={coffee.value}
-            />
-          )
-        }) }
       </CheckoutFormInformationsAboutCoffeesWrapper>
     </CheckoutFormInformationsAboutCoffeesContainer>
   )
