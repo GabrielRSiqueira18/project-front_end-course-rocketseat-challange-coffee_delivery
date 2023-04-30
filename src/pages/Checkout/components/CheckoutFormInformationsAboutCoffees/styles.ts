@@ -35,7 +35,7 @@ export const CheckoutFormInformationsAboutCoffeesWrapper = styled.div`
 `
 
 export const CheckoutFormInformationsContainerToPutScrollBar = styled.div`
-  height: 28rem;
+  height: auto;
 
   overflow: auto;
   overflow-x: hidden;

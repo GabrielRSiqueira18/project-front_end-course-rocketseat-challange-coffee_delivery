@@ -24,7 +24,7 @@ export function CheckoutFormInformationsAboutCoffees() {
             )
           }) }
         </CheckoutFormInformationsContainerToPutScrollBar>
-        
+        s
       </CheckoutFormInformationsAboutCoffeesWrapper>
     </CheckoutFormInformationsAboutCoffeesContainer>
   )
