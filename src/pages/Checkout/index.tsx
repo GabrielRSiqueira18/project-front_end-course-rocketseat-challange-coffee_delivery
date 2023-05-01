@@ -30,7 +30,7 @@ export function Checkout() {
     cep: zod.string().length(8).regex(/^\d+$/),
     street: zod.string().min(5).max(50),
     numberHouse: zod.string().min(1).max(3).regex(/^\d+$/),
-    houseComplement: zod.string().min(4).max(50),
+    houseComplement: zod.string().max(50).optional(),
     neighborhood: zod.string().min(5).max(50),
     city: zod.string().min(5).max(50),
     Uf: zod.string().length(2),

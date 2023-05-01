@@ -4,10 +4,11 @@ import { MapPin, ShoppingCart } from "phosphor-react"
 import { NavLink } from "react-router-dom"
 import { useContext } from 'react';
 import { CoffeesContexts } from "../../contexts/CoffeesContexts"
+import { InformationsPeopleContext } from "../../contexts/InformationsPeopleContexsts";
 
 export function Header() {
   const { coffees, coffeesBuyeds } = useContext(CoffeesContexts)
-
+  const { data } = useContext(InformationsPeopleContext)
   const buttonNavigateIsDisabled = coffeesBuyeds.length === 0
 
   let coffeesBuyedsReduce = 0
@@ -26,7 +27,7 @@ export function Header() {
 
         <div>
           <ButtonLocation>
-            <MapPin size={22} weight="fill"/> Porto Alegre, RS
+            <MapPin size={22} weight="fill"/> {data.city === '' && data.Uf === "" ? "" : `${data.city}, ${data.Uf.toUpperCase()}` }
           </ButtonLocation>
           <ShoppingCartContainer>
             
