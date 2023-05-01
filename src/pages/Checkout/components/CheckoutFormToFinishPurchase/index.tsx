@@ -1,8 +1,12 @@
 import { Bank, CreditCard, CurrencyDollar, MapPin, Money } from "phosphor-react";
 import { TitleCheckoutInformations } from "../CheckoutFormInformationsAboutCoffees/styles";
 import {  ButtonMethodPayment, ButtonsMethodsPaymentsToFinishPurchase, CepInputCheckout, CheckoutFormToFinishPurchaseContainer, CheckoutFormToFinishPurchaseWrapper, CityInputCheckout, FormCheckoutContainer, FormCheckoutTitleAddress, HouseComplementInputCheckout, InputCheckoutWrapper, NeighborhoodInputCheckout, NumberHouseInputCheckout, PaymentToFinishPurchase, StreetInputCheckout, UFInputCheckout } from "./styles";
+import { useContext } from "react";
+import { CoffeesContexts } from "../../../../contexts/CoffeesContexts";
 export function CheckoutFormToFinishPurchase() {
-
+  
+  const {  buttonsPayments, handleButtonIsActive } = useContext(CoffeesContexts)
+  
   return (
     <CheckoutFormToFinishPurchaseContainer>
       <TitleCheckoutInformations>Complete seu pedido</TitleCheckoutInformations>
@@ -36,10 +40,50 @@ export function CheckoutFormToFinishPurchase() {
             </div>
           </FormCheckoutTitleAddress>
           <ButtonsMethodsPaymentsToFinishPurchase>
-              <ButtonMethodPayment data-value="cartão de crédito"> <CreditCard color="#8047F8" size={16} /> Cartão de crédito</ButtonMethodPayment>
-              <ButtonMethodPayment data-value="cartão de débito"> <Bank color="#8047F8" size={16} /> cartão de débito</ButtonMethodPayment>
-              <ButtonMethodPayment data-value="dinheiro"> <Money color="#8047F8" size={16} /> dinheiro</ButtonMethodPayment>
-            </ButtonsMethodsPaymentsToFinishPurchase>
+            { buttonsPayments.map((button, index) => {
+              if(index === 0) {
+                return (
+                  <ButtonMethodPayment
+                    key={button.id}
+                    onClick={() => handleButtonIsActive(index)}
+                    data-value={button.type}
+                    isActive={button.isActive}
+                  >
+                    <CreditCard color="#8047F8" size={16} />
+                    { button.type }
+                  </ButtonMethodPayment>
+                )
+              } 
+              
+              else if(index === 1) {
+                return (
+                  <ButtonMethodPayment
+                    key={button.id}
+                    onClick={() => handleButtonIsActive(index)}
+                    data-value={button.type}
+                    isActive={button.isActive}
+                  >
+                    <Bank color="#8047F8" size={16} />
+                    { button.type }
+                  </ButtonMethodPayment>
+                )
+              } 
+              
+              else if(index === 2) {
+                return (
+                  <ButtonMethodPayment
+                    key={button.id}
+                    onClick={() => handleButtonIsActive(index)}
+                    data-value={button.type}
+                    isActive={button.isActive}
+                  >
+                    <Money color="#8047F8" size={16} />
+                    { button.type }
+                  </ButtonMethodPayment>
+                )
+              }
+            }) }    
+          </ButtonsMethodsPaymentsToFinishPurchase>
       </PaymentToFinishPurchase>
     </CheckoutFormToFinishPurchaseContainer>
 

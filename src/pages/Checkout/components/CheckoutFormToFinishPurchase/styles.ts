@@ -149,7 +149,11 @@ export const ButtonsMethodsPaymentsToFinishPurchase = styled.div`
   flex-wrap: wrap;
 `
 
-export const ButtonMethodPayment = styled.button`
+interface ButtonMethodPaymentProps {
+  isActive: boolean;
+}
+
+export const ButtonMethodPayment = styled.button<ButtonMethodPaymentProps>`
   padding: 1rem;
   display: flex;
   justify-content: center;
@@ -159,20 +163,20 @@ export const ButtonMethodPayment = styled.button`
   width: calc(33% - 0.75rem);
   height: 3.1875rem;
 
-  background-color: ${props => props.theme["base-button"]};
+  background-color: ${props => props.isActive ? props.theme["purple-light"] : props.theme["base-button"]};
 
   font-size: 0.75rem;
   line-height: 1.3;
 
-  border: 0;
+  border: 1px solid ${props => props.isActive ? props.theme["purple-dark"] : 'transparent'};
   border-radius: 6px;
-  cursor: pointer;
+  cursor: ${props => props.isActive ? 'default' : 'pointer'};
   
   text-transform: uppercase;
 
   &:hover {
     transition: 0.2s;
-    background-color: ${props => props.theme["base-hover"]};
+    background-color: ${props => props.isActive ? props.theme["purple-light"] : props.theme["base-hover"]};
   }
 
   @media screen and (max-width: 768px) {

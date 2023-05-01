@@ -6,8 +6,8 @@ import { convertValueToCorrect } from "../../../Home";
 import { NavLink } from "react-router-dom";
 
 export function CheckoutFormInformationsAboutCoffees() {
-  const { coffeesBuyeds, incrementOneCoffeeBuyed, decrementOneCoffeeBuyed, removeCoffeeInWallet } = useContext(CoffeesContexts)
-
+  const { coffeesBuyeds, buttonsPayments, incrementOneCoffeeBuyed, decrementOneCoffeeBuyed, removeCoffeeInWallet } = useContext(CoffeesContexts)
+  let isActiveButton = false
   let quantityCoffeeBuyed = 0
   const ratePerDelivery = (0.0125 * 100) 
 
@@ -24,13 +24,17 @@ export function CheckoutFormInformationsAboutCoffees() {
 
   const totalPriceFinal = totalPrice.toFixed(2).replace(".", ",")
 
-  
+  buttonsPayments.forEach(button => {
+    if(button.isActive) {
+      isActiveButton = true
+    } 
+  })
 
   return(
     <CheckoutFormInformationsAboutCoffeesContainer>
       <TitleCheckoutInformations>Cafés</TitleCheckoutInformations>
 
-      <CheckoutFormInformationsAboutCoffeesWrapper>
+      <CheckoutFormInformationsAboutCoffeesWrapper isActiveButton={isActiveButton}>
         <CheckoutFormInformationsContainerToPutScrollBar>
           { coffeesBuyeds.map(coffee => {
             const correctValue = convertValueToCorrect(coffee.value)

@@ -15,7 +15,11 @@ export const TitleCheckoutInformations = styled.h1`
   color: ${props => props.theme["base-subtitle"]};
 `
 
-export const CheckoutFormInformationsAboutCoffeesWrapper = styled.div`
+interface CheckoutFormInformationsAboutCoffeesWrapper {
+  isActiveButton: boolean;
+}
+
+export const CheckoutFormInformationsAboutCoffeesWrapper = styled.div<CheckoutFormInformationsAboutCoffeesWrapper>`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -25,7 +29,7 @@ export const CheckoutFormInformationsAboutCoffeesWrapper = styled.div`
   height: 31.125rem;
 
   border-radius: 6px 44px;
-  border: 1px solid #000000;
+  border: ${props => props.isActiveButton ? "1px solid transparent" : "1px solid #000000"};
   background-color: ${props => props.theme["base-card"]};
 `
 
