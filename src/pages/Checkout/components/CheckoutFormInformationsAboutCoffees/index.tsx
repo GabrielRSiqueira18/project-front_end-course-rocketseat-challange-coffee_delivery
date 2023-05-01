@@ -4,9 +4,12 @@ import { CoffeesContexts } from "../../../../contexts/CoffeesContexts";
 import { Minus, Plus, Trash } from "phosphor-react";
 import { convertValueToCorrect } from "../../../Home";
 import { NavLink } from "react-router-dom";
+import { ButtonsActivesContexts } from "../../../../contexts/ButtonsActivesContexts";
 
 export function CheckoutFormInformationsAboutCoffees() {
-  const { coffeesBuyeds, buttonsPayments, incrementOneCoffeeBuyed, decrementOneCoffeeBuyed, removeCoffeeInWallet } = useContext(CoffeesContexts)
+  const { coffeesBuyeds, incrementOneCoffeeBuyed, decrementOneCoffeeBuyed, removeCoffeeInWallet } = useContext(CoffeesContexts)
+  const {  buttonsPayments } = useContext(ButtonsActivesContexts)
+  
   let isActiveButton = false
   let quantityCoffeeBuyed = 0
   const ratePerDelivery = (0.0125 * 100) 

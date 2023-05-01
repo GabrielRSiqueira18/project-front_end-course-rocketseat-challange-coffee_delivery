@@ -180,7 +180,6 @@ export const ButtonMethodPayment = styled.button<ButtonMethodPaymentProps>`
   }
 
   @media screen and (max-width: 768px) {
-    width: calc(50%);
-    min-width: 10rem;
+    width: calc(100%);
   }
 `

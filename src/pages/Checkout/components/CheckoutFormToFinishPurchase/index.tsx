@@ -2,10 +2,10 @@ import { Bank, CreditCard, CurrencyDollar, MapPin, Money } from "phosphor-react"
 import { TitleCheckoutInformations } from "../CheckoutFormInformationsAboutCoffees/styles";
 import {  ButtonMethodPayment, ButtonsMethodsPaymentsToFinishPurchase, CepInputCheckout, CheckoutFormToFinishPurchaseContainer, CheckoutFormToFinishPurchaseWrapper, CityInputCheckout, FormCheckoutContainer, FormCheckoutTitleAddress, HouseComplementInputCheckout, InputCheckoutWrapper, NeighborhoodInputCheckout, NumberHouseInputCheckout, PaymentToFinishPurchase, StreetInputCheckout, UFInputCheckout } from "./styles";
 import { useContext } from "react";
-import { CoffeesContexts } from "../../../../contexts/CoffeesContexts";
+import { ButtonsActivesContexts } from "../../../../contexts/ButtonsActivesContexts";
 export function CheckoutFormToFinishPurchase() {
   
-  const {  buttonsPayments, handleButtonIsActive } = useContext(CoffeesContexts)
+  const {  buttonsPayments, handleButtonIsActive } = useContext(ButtonsActivesContexts)
   
   return (
     <CheckoutFormToFinishPurchaseContainer>

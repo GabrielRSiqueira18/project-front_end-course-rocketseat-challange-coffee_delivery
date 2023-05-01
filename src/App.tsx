@@ -4,6 +4,7 @@ import { defaultTheme } from "./styles/themes/default"
 import { HashRouter } from "react-router-dom"
 import { Router } from "./Router"
 import { CoffeesContextsProvider } from "./contexts/CoffeesContexts"
+import { ButtonsActivesContextsProvider } from "./contexts/ButtonsActivesContexts"
 
 function App() {
   
@@ -11,7 +12,9 @@ function App() {
     <ThemeProvider theme={defaultTheme}>
       < HashRouter>
         <CoffeesContextsProvider>
-          <Router/>
+          L<ButtonsActivesContextsProvider>
+            <Router />
+          </ButtonsActivesContextsProvider>
         </CoffeesContextsProvider>
       </ HashRouter>
       <GlobalStyle/>

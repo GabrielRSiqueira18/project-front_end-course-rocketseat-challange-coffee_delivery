@@ -7,29 +7,7 @@ interface CoffeesContextsProviderProps {
   children: ReactNode
 }
 
-interface ButtonsPayments {
-  id: number
-  type: string
-  isActive: boolean
-}
 
-const initialButtonsPayments: ButtonsPayments[] = [
-  {
-    id: 1,
-    type: "cartão de crédito",
-    isActive: false
-  },
-  {
-    id: 2,
-    type: "cartão de débito",
-    isActive: false
-  },
-  {
-    id: 3,
-    type: "dinheiro",
-    isActive: false
-  },
-]
 
 
 
@@ -56,15 +34,13 @@ export interface Coffees {
 interface CoffeesContextsType {
   coffees: Coffees[]
   coffeesBuyeds: CoffeesBuyed[]
-  buttonsPayments: ButtonsPayments[]
   incrementOneCoffee: (coffeeId: number) => void
   decrementOneCoffee: (coffeeId: number) => void
   addCoffeesToWallet: (coffeeId: number, newCoffeeBuyed: CoffeesBuyed) => void
   incrementOneCoffeeBuyed: (coffeeId: number) => void
   decrementOneCoffeeBuyed: (coffeeId: number) => void 
   removeCoffeeInWallet: (coffeeId: number) => void 
-  handleButtonIsActive: (buttonIndex: number) => void 
-}
+  }
 
 const initialState = {
   coffees: initialCoffees,
@@ -107,19 +83,12 @@ export function CoffeesContextsProvider({ children }: CoffeesContextsProviderPro
     dispatch(removeCoffeeInWalletAction(coffeeId))
   }
 
-  function handleButtonIsActive(buttonIndex: number) {
-    setButtonPayments((prevState) =>
-      prevState.map((button, index) => ({
-        ...button,
-        isActive: index === buttonIndex ? true : false,
-      }))
-    );
-  }
+  
 
-  const [ buttonsPayments, setButtonPayments ] = useState<ButtonsPayments[]>(initialButtonsPayments)
+  
 
   return(
-    <CoffeesContexts.Provider value={{ coffees, coffeesBuyeds, buttonsPayments,incrementOneCoffee, decrementOneCoffee, addCoffeesToWallet,incrementOneCoffeeBuyed, decrementOneCoffeeBuyed, removeCoffeeInWallet,handleButtonIsActive }}>
+    <CoffeesContexts.Provider value={{ coffees, coffeesBuyeds,incrementOneCoffee, decrementOneCoffee, addCoffeesToWallet,incrementOneCoffeeBuyed, decrementOneCoffeeBuyed, removeCoffeeInWallet }}>
       { children }
     </CoffeesContexts.Provider>
   )

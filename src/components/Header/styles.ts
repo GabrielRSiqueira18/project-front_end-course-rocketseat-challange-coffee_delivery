@@ -5,7 +5,8 @@ export const HeaderWrapper = styled.div`
   position: fixed;
   background-color: ${props => props.theme.background};
   z-index: 999;
-  
+  top: 0;
+
   @media screen and (max-width: 768px) {
     padding: 1rem;
     margin-bottom: 1.5rem;

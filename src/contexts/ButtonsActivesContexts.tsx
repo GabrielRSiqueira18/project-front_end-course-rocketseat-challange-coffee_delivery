@@ -1,0 +1,56 @@
+import { ReactNode, createContext, useState } from "react";
+
+interface ButtonsActivesContextsType {
+  buttonsPayments: ButtonsPayments[]
+  handleButtonIsActive: (buttonIndex: number) => void 
+
+}
+
+interface ButtonsPayments {
+  id: number
+  type: string
+  isActive: boolean
+}
+
+const initialButtonsPayments: ButtonsPayments[] = [
+  {
+    id: 1,
+    type: "cartão de crédito",
+    isActive: false
+  },
+  {
+    id: 2,
+    type: "cartão de débito",
+    isActive: false
+  },
+  {
+    id: 3,
+    type: "dinheiro",
+    isActive: false
+  },
+]
+
+interface ButtonsActivesContextsProviderProps {
+  children: ReactNode
+}
+
+export const ButtonsActivesContexts = createContext({} as ButtonsActivesContextsType)
+
+export function ButtonsActivesContextsProvider({ children }: ButtonsActivesContextsProviderProps) {
+  function handleButtonIsActive(buttonIndex: number) {
+    setButtonPayments((prevState) =>
+      prevState.map((button, index) => ({
+        ...button,
+        isActive: index === buttonIndex ? true : false,
+      }))
+    );
+  }
+
+  const [ buttonsPayments, setButtonPayments ] = useState<ButtonsPayments[]>(initialButtonsPayments)
+
+  return(
+    <ButtonsActivesContexts.Provider value={{ buttonsPayments, handleButtonIsActive }}>
+      { children }
+    </ButtonsActivesContexts.Provider>
+  )
+}
