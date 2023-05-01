@@ -73,8 +73,8 @@ export function coffeesReducer(state: CoffeesState, action: any) {
 
     case ActionTypes.DECREMENT_ONE_IN_COFFEE_TO_BUYED: {
       return produce(state, draft => {
-        if(draft.coffees[coffeeTargetIndex].quantityBuyed === 0) {
-          draft.coffees[coffeeTargetIndex].quantityBuyed = 0
+        if(draft.coffees[coffeeTargetIndex].quantityBuyed === 1) {
+          draft.coffees[coffeeTargetIndex].quantityBuyed = 1
           
         } else {
           draft.coffees[coffeeTargetIndex].quantityBuyed = state.coffees[coffeeTargetIndex].quantityBuyed - 1

@@ -40,7 +40,7 @@ export const MainContainer = styled.div`
   }
 `
 
-export const CoffeeWrapper = styled.div`
+export const CoffeeWrapper = styled.main`
   display: flex;
   gap: 2rem;
 

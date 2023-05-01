@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const CheckoutFormInformationsAboutCoffeesContainer = styled.div`
+  margin-right: 2rem;
   display: flex;
   flex-direction: column;
   gap: 0.9375rem;
