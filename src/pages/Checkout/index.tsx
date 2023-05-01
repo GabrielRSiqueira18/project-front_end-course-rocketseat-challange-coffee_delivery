@@ -62,14 +62,13 @@ export function Checkout() {
       
       if(buttonTargetActive) {
         putMethodPayment(buttonTargetActive.type)
-        console.log(methodPayment)
         const newInformationsData: DataTypes  = {
           street: data.street,
           streetNumber: data.numberHouse,
           neighborhood: data.neighborhood,
           city: data.city,
           Uf: data.Uf,
-          methodPayment
+          methodPayment: methodPayment
         }
   
         putPeopleDatasInDataObject(newInformationsData)

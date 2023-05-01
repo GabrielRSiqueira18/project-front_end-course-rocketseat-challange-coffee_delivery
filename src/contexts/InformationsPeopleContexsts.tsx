@@ -40,7 +40,6 @@ export function InformationsPeopleContextProvider({ children }: InformationsPeop
 
   function putPeopleDatasInDataObject(datasPeople: DataTypes) {
     setData(prevState => {
-
       return {
         ...prevState,
         street: datasPeople.street,
@@ -48,10 +47,11 @@ export function InformationsPeopleContextProvider({ children }: InformationsPeop
         neighborhood: datasPeople.neighborhood,
         city: datasPeople.city,
         Uf: datasPeople.Uf,
-        methodPayment
+        methodPayment: datasPeople.methodPayment 
       }
     })
   }
+
 
   function putMethodPayment(method: string) {
     setMethodPayment(() => {
