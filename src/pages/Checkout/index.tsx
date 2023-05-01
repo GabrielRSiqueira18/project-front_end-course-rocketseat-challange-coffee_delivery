@@ -8,17 +8,21 @@ import { useContext } from "react";
 import { ButtonsActivesContexts } from "../../contexts/ButtonsActivesContexts";
 import { useNavigate } from "react-router-dom"
 import { CoffeesContexts } from "../../contexts/CoffeesContexts";
+import { DataTypes, InformationsPeopleContext } from "../../contexts/InformationsPeopleContexsts";
 
 export function Checkout() {
   const navigate = useNavigate()
   const { finalizePurchaseCoffees } = useContext(CoffeesContexts)
   const { buttonsPayments, putAllButtonsIsActiveToFalse } = useContext(ButtonsActivesContexts)
+  const { putPeopleDatasInDataObject } = useContext(InformationsPeopleContext)
+  const { methodPayment, putMethodPayment } = useContext(InformationsPeopleContext)
   
   let isActiveButton = false
 
   buttonsPayments.forEach(button => {
     if(button.isActive) {
       isActiveButton = true
+      
     } 
   })
 
@@ -49,12 +53,34 @@ export function Checkout() {
 
   const { handleSubmit, reset } = registrationPeopleForm
 
-  function concludePurchaseCoffees() {
+  function concludePurchaseCoffees(data: registrationFormPeopleData) {
+    
+
     if(isActiveButton) {
-      putAllButtonsIsActiveToFalse()
-      finalizePurchaseCoffees()
-      //navigate("/checkout-filled")
-      reset()
+
+      const buttonTargetActive = buttonsPayments.find(button => button.isActive === true)
+      
+      if(buttonTargetActive) {
+        putMethodPayment(buttonTargetActive.type)
+        console.log(methodPayment)
+        const newInformationsData: DataTypes  = {
+          street: data.street,
+          streetNumber: data.numberHouse,
+          neighborhood: data.neighborhood,
+          city: data.city,
+          Uf: data.Uf,
+          methodPayment
+        }
+  
+        putPeopleDatasInDataObject(newInformationsData)
+        putAllButtonsIsActiveToFalse()
+        //finalizePurchaseCoffees()
+        
+        //navigate("/checkout-filled")
+        //reset()
+      }
+      
+      
       
     } else {
       alert("Escolha um método de pagamento")

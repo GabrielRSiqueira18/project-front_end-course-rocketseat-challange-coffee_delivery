@@ -1,4 +1,5 @@
-import { ReactNode, createContext, useState } from "react";
+import { ReactNode, createContext, useContext, useEffect, useState } from "react";
+import { InformationsPeopleContext } from "./InformationsPeopleContexsts";
 
 interface ButtonsActivesContextsType {
   buttonsPayments: ButtonsPayments[]
@@ -38,6 +39,8 @@ interface ButtonsActivesContextsProviderProps {
 export const ButtonsActivesContexts = createContext({} as ButtonsActivesContextsType)
 
 export function ButtonsActivesContextsProvider({ children }: ButtonsActivesContextsProviderProps) {
+  const [ buttonsPayments, setButtonPayments ] = useState<ButtonsPayments[]>(initialButtonsPayments)
+
   function handleButtonIsActive(buttonIndex: number) {
     setButtonPayments((prevState) =>
       prevState.map((button, index) => ({
@@ -46,6 +49,7 @@ export function ButtonsActivesContextsProvider({ children }: ButtonsActivesConte
       }))
     );
   }
+  
 
   function putAllButtonsIsActiveToFalse() {
     setButtonPayments((prevState) =>
@@ -58,7 +62,7 @@ export function ButtonsActivesContextsProvider({ children }: ButtonsActivesConte
 
   
 
-  const [ buttonsPayments, setButtonPayments ] = useState<ButtonsPayments[]>(initialButtonsPayments)
+  
   
 
   return(

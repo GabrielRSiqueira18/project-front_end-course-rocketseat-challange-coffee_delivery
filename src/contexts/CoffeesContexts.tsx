@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useReducer, useState } from "react";
+import { ReactNode, createContext, useReducer } from "react";
 import { initialCoffees } from "./initialValuesCofees";
 import { coffeesReducer } from "../reducers/coffees/reducer";
 import { AddCoffeesToWalletAction, decrementCoffeesToBuyedAction, decrementOneCoffeeAction, finalizePurchaseCoffeesAction, incrementCoffeesToBuyedAction, incrementOneCoffeeAction, removeCoffeeInWalletAction } from "../reducers/coffees/actions";
@@ -6,10 +6,6 @@ import { AddCoffeesToWalletAction, decrementCoffeesToBuyedAction, decrementOneCo
 interface CoffeesContextsProviderProps {
   children: ReactNode
 }
-
-
-
-
 
 export interface CoffeesBuyed {
   id: number

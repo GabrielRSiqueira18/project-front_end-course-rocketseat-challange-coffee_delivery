@@ -33,7 +33,7 @@ export function RegisterInformationsPeopleForm() {
       />
       <CityInputCheckout
         type="text"
-        placeholder="Rua"
+        placeholder="Cidade"
         {...register("city")} 
       />
       <UFInputCheckout

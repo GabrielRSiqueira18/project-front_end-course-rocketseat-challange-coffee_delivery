@@ -5,6 +5,7 @@ import { HashRouter } from "react-router-dom"
 import { Router } from "./Router"
 import { CoffeesContextsProvider } from "./contexts/CoffeesContexts"
 import { ButtonsActivesContextsProvider } from "./contexts/ButtonsActivesContexts"
+import { InformationsPeopleContextProvider } from "./contexts/InformationsPeopleContexsts"
 
 function App() {
   
@@ -12,8 +13,11 @@ function App() {
     <ThemeProvider theme={defaultTheme}>
       < HashRouter>
         <CoffeesContextsProvider>
-          L<ButtonsActivesContextsProvider>
-            <Router />
+          <ButtonsActivesContextsProvider>
+            <InformationsPeopleContextProvider>
+              <Router />
+            </InformationsPeopleContextProvider>
+           
           </ButtonsActivesContextsProvider>
         </CoffeesContextsProvider>
       </ HashRouter>
