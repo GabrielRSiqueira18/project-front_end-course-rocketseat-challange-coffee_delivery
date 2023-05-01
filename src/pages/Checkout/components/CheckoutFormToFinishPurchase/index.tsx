@@ -1,8 +1,9 @@
 import { Bank, CreditCard, CurrencyDollar, MapPin, Money } from "phosphor-react";
 import { TitleCheckoutInformations } from "../CheckoutFormInformationsAboutCoffees/styles";
-import {  ButtonMethodPayment, ButtonsMethodsPaymentsToFinishPurchase, CepInputCheckout, CheckoutFormToFinishPurchaseContainer, CheckoutFormToFinishPurchaseWrapper, CityInputCheckout, FormCheckoutContainer, FormCheckoutTitleAddress, HouseComplementInputCheckout, InputCheckoutWrapper, NeighborhoodInputCheckout, NumberHouseInputCheckout, PaymentToFinishPurchase, StreetInputCheckout, UFInputCheckout } from "./styles";
+import {  ButtonMethodPayment, ButtonsMethodsPaymentsToFinishPurchase, CheckoutFormToFinishPurchaseContainer, CheckoutFormToFinishPurchaseWrapper, FormCheckoutContainer, FormCheckoutTitleAddress, PaymentToFinishPurchase } from "./styles";
 import { useContext } from "react";
 import { ButtonsActivesContexts } from "../../../../contexts/ButtonsActivesContexts";
+import { RegisterInformationsPeopleForm } from "./RegisterInformationsPeopleForm";
 export function CheckoutFormToFinishPurchase() {
   
   const {  buttonsPayments, handleButtonIsActive } = useContext(ButtonsActivesContexts)
@@ -20,15 +21,7 @@ export function CheckoutFormToFinishPurchase() {
             </div>
           </FormCheckoutTitleAddress>
           
-          <InputCheckoutWrapper> 
-            <CepInputCheckout type="text" placeholder="CEP"/>
-            <StreetInputCheckout type="text" placeholder="Rua" />
-            <NumberHouseInputCheckout type="text" placeholder="Número" />
-            <HouseComplementInputCheckout type="text" placeholder="Complemento" />
-            <NeighborhoodInputCheckout type="text" placeholder="Bairro" />
-            <CityInputCheckout type="text" placeholder="Rua" />
-            <UFInputCheckout type="text" placeholder="Rua" />
-          </InputCheckoutWrapper>
+          <RegisterInformationsPeopleForm />
         </FormCheckoutContainer>
       </CheckoutFormToFinishPurchaseWrapper>
       <PaymentToFinishPurchase>
