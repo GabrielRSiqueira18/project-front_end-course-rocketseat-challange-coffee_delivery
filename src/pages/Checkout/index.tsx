@@ -7,9 +7,11 @@ import * as zod from "zod"
 import { useContext } from "react";
 import { ButtonsActivesContexts } from "../../contexts/ButtonsActivesContexts";
 import { useNavigate } from "react-router-dom"
+import { CoffeesContexts } from "../../contexts/CoffeesContexts";
 
 export function Checkout() {
   const navigate = useNavigate()
+  const { finalizePurchaseCoffees } = useContext(CoffeesContexts)
   const { buttonsPayments, putAllButtonsIsActiveToFalse } = useContext(ButtonsActivesContexts)
   
   let isActiveButton = false
@@ -45,17 +47,17 @@ export function Checkout() {
     }
   })
 
-  const { handleSubmit, watch, reset } = registrationPeopleForm
+  const { handleSubmit, reset } = registrationPeopleForm
 
-  function concludePurchaseCoffees(data: registrationFormPeopleData) {
+  function concludePurchaseCoffees() {
     if(isActiveButton) {
       putAllButtonsIsActiveToFalse()
+      finalizePurchaseCoffees()
       //navigate("/checkout-filled")
-      console.log(data)
       reset()
       
     } else {
-      console.error("ERROR")
+      alert("Escolha um método de pagamento")
     }
   }
 

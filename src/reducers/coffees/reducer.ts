@@ -8,11 +8,10 @@ export interface CoffeesState {
 }
 
 export function coffeesReducer(state: CoffeesState, action: any) {
-  const coffeeTargetIndex = state.coffees.findIndex(coffee => coffee.id === action.payload.coffeeId)
-  const coffeeBuyedTargetIndex = state.coffeesBuyeds.findIndex(coffee => coffee.id === action.payload.coffeeId)
   
   switch(action.type) {
     case ActionTypes.INCREMENT_ONE_IN_QUANTITY_COFFEE: {
+      const coffeeTargetIndex = state.coffees.findIndex(coffee => coffee.id === action.payload.coffeeId)
       if(coffeeTargetIndex < 0) {
         return state
       }
@@ -23,6 +22,7 @@ export function coffeesReducer(state: CoffeesState, action: any) {
     }  
     
     case ActionTypes.DECREMENT_ONE_IN_QUANTITY_COFFEE: {
+      const coffeeTargetIndex = state.coffees.findIndex(coffee => coffee.id === action.payload.coffeeId)
       if(coffeeTargetIndex < 0) {
         return state
       }
@@ -39,6 +39,7 @@ export function coffeesReducer(state: CoffeesState, action: any) {
     }
 
     case ActionTypes.ADD_COFFEE_TO_WALLET: {
+      const coffeeBuyedTargetIndex = state.coffeesBuyeds.findIndex(coffee => coffee.id === action.payload.coffeeId)
       const newBuyedCoffeeExists = state.coffeesBuyeds.find(coffee => coffee.id === action.payload.coffeeId)
       const coffeeTargetIndex = state.coffees.findIndex(coffee => coffee.id === action.payload.coffeeId)
     
@@ -71,7 +72,10 @@ export function coffeesReducer(state: CoffeesState, action: any) {
         }
       })
     }
+
     case ActionTypes.INCREMENT_ONE_IN_COFFEE_TO_BUYED: {
+      const coffeeBuyedTargetIndex = state.coffeesBuyeds.findIndex(coffee => coffee.id === action.payload.coffeeId)
+      const coffeeTargetIndex = state.coffees.findIndex(coffee => coffee.id === action.payload.coffeeId)
       return produce(state, draft => {
         draft.coffees[coffeeTargetIndex].quantityBuyed = state.coffees[coffeeTargetIndex].quantityBuyed + 1
         draft.coffeesBuyeds[coffeeBuyedTargetIndex].quantityBuyed = draft.coffeesBuyeds[coffeeBuyedTargetIndex].quantityBuyed += 1
@@ -79,6 +83,8 @@ export function coffeesReducer(state: CoffeesState, action: any) {
     }
 
     case ActionTypes.DECREMENT_ONE_IN_COFFEE_TO_BUYED: {
+      const coffeeBuyedTargetIndex = state.coffeesBuyeds.findIndex(coffee => coffee.id === action.payload.coffeeId)
+      const coffeeTargetIndex = state.coffees.findIndex(coffee => coffee.id === action.payload.coffeeId)
       return produce(state, draft => {
         if(draft.coffees[coffeeTargetIndex].quantityBuyed === 1) {
           draft.coffees[coffeeTargetIndex].quantityBuyed = 1
@@ -95,7 +101,10 @@ export function coffeesReducer(state: CoffeesState, action: any) {
         
       })
     }
+
     case ActionTypes.REMOVE_COFFEE_IN_WALLET: {
+      const coffeeBuyedTargetIndex = state.coffeesBuyeds.findIndex(coffee => coffee.id === action.payload.coffeeId)
+      const coffeeTargetIndex = state.coffees.findIndex(coffee => coffee.id === action.payload.coffeeId)
       return produce(state, draft => {
         draft.coffeesBuyeds.splice(coffeeBuyedTargetIndex, 1)
         draft.coffees[coffeeTargetIndex].quantityBuyed = 0
@@ -103,6 +112,14 @@ export function coffeesReducer(state: CoffeesState, action: any) {
       })
     }
 
+    case ActionTypes.FINALIZE_PURCHASE_COFFEES: {
+      return produce(state, draft => {
+        draft.coffees.forEach(coffee => {
+          coffee.quantityBuyed = 0
+        })
+        draft.coffeesBuyeds = []
+      })
+    }
     default:
       return state
   }

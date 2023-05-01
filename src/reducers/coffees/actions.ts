@@ -9,6 +9,7 @@ export enum ActionTypes {
   INCREMENT_ONE_IN_COFFEE_TO_BUYED = 'INCREMENT_ONE_IN_COFFEE_TO_BUYED',
   DECREMENT_ONE_IN_COFFEE_TO_BUYED = 'DECREMENT_ONE_IN_COFFEE_TO_BUYED',
   REMOVE_COFFEE_IN_WALLET = 'REMOVE_COFFEE_IN_WALLET',
+  FINALIZE_PURCHASE_COFFEES = 'FINALIZE_PURCHASE_COFFEES'
 }
 
 export function incrementOneCoffeeAction(coffeeId: number) {
@@ -32,7 +33,6 @@ export function decrementOneCoffeeAction(coffeeId: number) {
 }
 
 export function AddCoffeesToWalletAction(coffeeId: number, newCoffeeBuyed: CoffeesBuyed) {
-  
   return {
     type: ActionTypes.ADD_COFFEE_TO_WALLET,
 
@@ -44,7 +44,6 @@ export function AddCoffeesToWalletAction(coffeeId: number, newCoffeeBuyed: Coffe
 }
 
 export function incrementCoffeesToBuyedAction(coffeeId: number) {
-  
   return {
     type: ActionTypes.INCREMENT_ONE_IN_COFFEE_TO_BUYED,
 
@@ -55,7 +54,6 @@ export function incrementCoffeesToBuyedAction(coffeeId: number) {
 }
 
 export function decrementCoffeesToBuyedAction(coffeeId: number) {
-  
   return {
     type: ActionTypes.DECREMENT_ONE_IN_COFFEE_TO_BUYED,
 
@@ -66,12 +64,17 @@ export function decrementCoffeesToBuyedAction(coffeeId: number) {
 }
 
 export function removeCoffeeInWalletAction(coffeeId: number) {
-  
   return {
     type: ActionTypes.REMOVE_COFFEE_IN_WALLET,
 
     payload: {
       coffeeId,
     }
+  }
+}
+
+export function finalizePurchaseCoffeesAction() {
+  return {
+    type: ActionTypes.FINALIZE_PURCHASE_COFFEES,
   }
 }
