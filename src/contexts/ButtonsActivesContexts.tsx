@@ -60,11 +60,7 @@ export function ButtonsActivesContextsProvider({ children }: ButtonsActivesConte
     );
   }
 
-  
-
-  
-  
-
+ 
   return(
     <ButtonsActivesContexts.Provider value={{ buttonsPayments, handleButtonIsActive, putAllButtonsIsActiveToFalse }}>
       { children }
