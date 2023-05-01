@@ -6,9 +6,7 @@ export interface DataTypes {
   neighborhood: string
   city: string
   Uf: string
-  methodPayment: string
 }
-
 interface InformationsPeopleContextTypes {
   data: DataTypes
   methodPayment: string
@@ -26,7 +24,6 @@ const initialValuesData = {
   neighborhood: '',
   city: '',
   Uf: '',
-  methodPayment: ''
 }
 
 export const InformationsPeopleContext = createContext({} as InformationsPeopleContextTypes)
@@ -35,9 +32,7 @@ export function InformationsPeopleContextProvider({ children }: InformationsPeop
  
   const [ data, setData ] = useState<DataTypes>(initialValuesData)
   const [ methodPayment, setMethodPayment] = useState('')
-
   
-
   function putPeopleDatasInDataObject(datasPeople: DataTypes) {
     setData(prevState => {
       return {
@@ -47,7 +42,6 @@ export function InformationsPeopleContextProvider({ children }: InformationsPeop
         neighborhood: datasPeople.neighborhood,
         city: datasPeople.city,
         Uf: datasPeople.Uf,
-        methodPayment: datasPeople.methodPayment 
       }
     })
   }

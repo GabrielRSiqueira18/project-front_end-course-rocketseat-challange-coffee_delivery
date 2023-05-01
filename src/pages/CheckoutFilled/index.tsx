@@ -4,12 +4,13 @@ import { useContext } from "react";
 import { InformationsPeopleContext } from "../../contexts/InformationsPeopleContexsts";
 
 export function CheckoutFilled() {
-  const { data } = useContext(InformationsPeopleContext)
-
+  const { data, methodPayment } = useContext(InformationsPeopleContext)
+  
   return(
     <CheckoutFilledContainer>
       <pre>
         {JSON.stringify(data, null, 2)}
+        {methodPayment}
       </pre>
       <TitleWrapper>
         <h2>Uhu! Pedido confirmado</h2>

@@ -15,7 +15,7 @@ export function Checkout() {
   const { finalizePurchaseCoffees } = useContext(CoffeesContexts)
   const { buttonsPayments, putAllButtonsIsActiveToFalse } = useContext(ButtonsActivesContexts)
   const { putPeopleDatasInDataObject } = useContext(InformationsPeopleContext)
-  const { methodPayment, putMethodPayment } = useContext(InformationsPeopleContext)
+  const {  putMethodPayment } = useContext(InformationsPeopleContext)
   
   let isActiveButton = false
 
@@ -68,7 +68,6 @@ export function Checkout() {
           neighborhood: data.neighborhood,
           city: data.city,
           Uf: data.Uf,
-          methodPayment: methodPayment
         }
   
         putPeopleDatasInDataObject(newInformationsData)
