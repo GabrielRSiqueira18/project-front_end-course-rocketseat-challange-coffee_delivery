@@ -3,6 +3,7 @@ import { ReactNode, createContext, useState } from "react";
 interface ButtonsActivesContextsType {
   buttonsPayments: ButtonsPayments[]
   handleButtonIsActive: (buttonIndex: number) => void 
+  putAllButtonsIsActiveToFalse: () => void 
 
 }
 
@@ -46,10 +47,22 @@ export function ButtonsActivesContextsProvider({ children }: ButtonsActivesConte
     );
   }
 
+  function putAllButtonsIsActiveToFalse() {
+    setButtonPayments((prevState) =>
+      prevState.map((button) => ({
+        ...button,
+        isActive: false
+      }))
+    );
+  }
+
+  
+
   const [ buttonsPayments, setButtonPayments ] = useState<ButtonsPayments[]>(initialButtonsPayments)
+  
 
   return(
-    <ButtonsActivesContexts.Provider value={{ buttonsPayments, handleButtonIsActive }}>
+    <ButtonsActivesContexts.Provider value={{ buttonsPayments, handleButtonIsActive, putAllButtonsIsActiveToFalse }}>
       { children }
     </ButtonsActivesContexts.Provider>
   )

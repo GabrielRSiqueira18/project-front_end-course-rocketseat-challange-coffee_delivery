@@ -15,7 +15,7 @@ export const CheckoutContainer = styled.div`
 
 `
 
-export const CheckoutWrapper = styled.div`
+export const CheckoutWrapper = styled.form`
   display: flex;
   gap: 2rem;
   width: 100%;

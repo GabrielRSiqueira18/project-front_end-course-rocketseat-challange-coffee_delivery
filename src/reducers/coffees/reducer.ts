@@ -47,11 +47,18 @@ export function coffeesReducer(state: CoffeesState, action: any) {
           if(coffeeTargetIndex < 0) {
             return state
           }
-            
-          draft.coffees[coffeeTargetIndex].quantityBuyed = Number(draft.coffees[coffeeTargetIndex].quantityToBuy) + draft.coffees[coffeeTargetIndex].quantityBuyed
-          draft.coffees[coffeeTargetIndex].quantityToBuy = String(0)
+
+          if(state.coffees[coffeeTargetIndex].quantityToBuy == String(0)) {
+            draft.coffees[coffeeTargetIndex].quantityBuyed = Number(draft.coffees[coffeeTargetIndex].quantityToBuy) 
+            draft.coffees[coffeeTargetIndex].quantityToBuy = String(0)
+          } else {
+            draft.coffees[coffeeTargetIndex].quantityBuyed = Number(draft.coffees[coffeeTargetIndex].quantityToBuy) + draft.coffees[coffeeTargetIndex].quantityBuyed
+            draft.coffees[coffeeTargetIndex].quantityToBuy = String(0)
     
-          draft.coffeesBuyeds.push(action.payload.newCoffeeBuyed)
+            draft.coffeesBuyeds.push(action.payload.newCoffeeBuyed)
+          }
+            
+          
         } else if(newBuyedCoffeeExists !== undefined) {
           if(coffeeTargetIndex < 0) {
             return state

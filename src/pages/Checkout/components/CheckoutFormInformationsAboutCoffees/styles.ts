@@ -97,9 +97,9 @@ export const CoffeeInformationsWithoutPriceWrapper = styled.div`
   }
 `
 
-const BaseButtonCoffee = styled.button`
+const BaseButtonCoffee = styled.span`
   border: 0;
-
+  user-select: none;
   display: flex;
   height: 2rem;
   justify-content: center;
@@ -256,7 +256,8 @@ export const TotalTitlePricesAllCoffees = styled.h2`
   color: ${props => props.theme['base-subtitle']};
 `
 
-export const ButtonToFinalizeShoppingCoffee = styled.span`
+export const ButtonToFinalizeShoppingCoffee = styled.button`
+  border: 0;
   text-transform: uppercase;
   font-family: 'Roboto';
   color: ${props => props.theme['white']};

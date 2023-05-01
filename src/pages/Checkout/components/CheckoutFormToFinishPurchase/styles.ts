@@ -88,7 +88,7 @@ interface ButtonMethodPaymentProps {
   isActive: boolean;
 }
 
-export const ButtonMethodPayment = styled.button<ButtonMethodPaymentProps>`
+export const ButtonMethodPayment = styled.span<ButtonMethodPaymentProps>`
   padding: 1rem;
   display: flex;
   justify-content: center;

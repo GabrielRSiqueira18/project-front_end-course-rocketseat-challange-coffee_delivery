@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ButtonToFinalizeShoppingCoffee, CheckoutFormInformationsAboutCoffeesContainer, CheckoutFormInformationsAboutCoffeesWrapper, CheckoutFormInformationsContainerToPutScrollBar as CheckoutFormInformationsContainerToPutScrollBar, CoffeeButtonQuantityBuyed, CoffeeButtonRemoveBuyed, CoffeeBuyedsInformationsSingleContainer, CoffeeInformationsWithoutPrice, CoffeeInformationsWithoutPriceWrapper, NoCoffeesBuyedsContainer, PriceCoffee, PriceCoffeeInCheckoutToBuy, PriceCoffeesWrapper, PriceOfTheCoffeesAndDelivery, TitleCheckoutInformations, TotalTitlePricesAllCoffees, TypePriceCoffeeInCheckoutToBuy } from "./styles";
 import { CoffeesContexts } from "../../../../contexts/CoffeesContexts";
 import { Minus, Plus, Trash } from "phosphor-react";
@@ -8,9 +8,18 @@ import { ButtonsActivesContexts } from "../../../../contexts/ButtonsActivesConte
 
 export function CheckoutFormInformationsAboutCoffees() {
   const { coffeesBuyeds, incrementOneCoffeeBuyed, decrementOneCoffeeBuyed, removeCoffeeInWallet } = useContext(CoffeesContexts)
-  const {  buttonsPayments } = useContext(ButtonsActivesContexts)
+  const { buttonsPayments } = useContext(ButtonsActivesContexts)
   
-  let isActiveButton = false
+  const [ isActiveButton, setIsActiveButton ] = useState(false)
+
+  useEffect(() => {
+    buttonsPayments.forEach(button => {
+      if(button.isActive) { 
+        setIsActiveButton(true)
+      } 
+    })
+  })
+
   let quantityCoffeeBuyed = 0
   const ratePerDelivery = (0.0125 * 100) 
 
@@ -27,11 +36,7 @@ export function CheckoutFormInformationsAboutCoffees() {
 
   const totalPriceFinal = totalPrice.toFixed(2).replace(".", ",")
 
-  buttonsPayments.forEach(button => {
-    if(button.isActive) {
-      isActiveButton = true
-    } 
-  })
+  
 
   return(
     <CheckoutFormInformationsAboutCoffeesContainer>
@@ -108,8 +113,3 @@ export function CheckoutFormInformationsAboutCoffees() {
     </CheckoutFormInformationsAboutCoffeesContainer>
   )
 }
-
-/*
-  Tirar border color #000000 no CheckoutFormInformationsAboutCoffeesWrapper quando tiver selecionado o cartao!!!
-  LEMBRAR
-*/
