@@ -1,5 +1,4 @@
-import { ReactNode, createContext, useContext, useEffect, useState } from "react";
-import { InformationsPeopleContext } from "./InformationsPeopleContexsts";
+import { ReactNode, createContext, useState } from "react";
 
 interface ButtonsActivesContextsType {
   buttonsPayments: ButtonsPayments[]

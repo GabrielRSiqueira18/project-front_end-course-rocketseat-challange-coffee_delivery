@@ -74,10 +74,10 @@ export function Checkout() {
   
         putPeopleDatasInDataObject(newInformationsData)
         putAllButtonsIsActiveToFalse()
-        //finalizePurchaseCoffees()
+        finalizePurchaseCoffees()
         
-        //navigate("/checkout-filled")
-        //reset()
+        navigate("/checkout-filled")
+        reset()
       }
       
       
