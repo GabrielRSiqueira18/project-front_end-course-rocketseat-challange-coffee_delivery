@@ -6,7 +6,6 @@ import { Router } from "./Router"
 import { CoffeesContextsProvider } from "./contexts/CoffeesContexts"
 import { ButtonsActivesContextsProvider } from "./contexts/ButtonsActivesContexts"
 import { InformationsPeopleContextProvider } from "./contexts/InformationsPeopleContexsts"
-
 function App() {
   
   return (
@@ -17,9 +16,9 @@ function App() {
             <InformationsPeopleContextProvider>
               <Router />
             </InformationsPeopleContextProvider>
-           
           </ButtonsActivesContextsProvider>
         </CoffeesContextsProvider>
+        
       </ HashRouter>
       <GlobalStyle/>
     </ThemeProvider>

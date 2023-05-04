@@ -89,6 +89,7 @@ interface ButtonMethodPaymentProps {
 }
 
 export const ButtonMethodPayment = styled.span<ButtonMethodPaymentProps>`
+  font-family: Roboto;
   padding: 1rem;
   display: flex;
   justify-content: center;
