@@ -27,7 +27,7 @@ export function Checkout() {
   })
 
   const registrationPeopleFormValidationSchema = zod.object({
-    cep: zod.string().length(8).regex(/^\d+$/),
+    cep: zod.string().length(8).nullable(),
     street: zod.string().min(5).max(50),
     numberHouse: zod.string().min(1).max(3).regex(/^\d+$/),
     houseComplement: zod.string().max(50).optional(),

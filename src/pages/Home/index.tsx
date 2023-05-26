@@ -4,7 +4,6 @@ import { AmountButtonCoffee, ButtonToBuyCoffee, BuyAndPriceCoffeeContainer, Coff
 import { Coffees, CoffeesBuyed, CoffeesContexts } from "../../contexts/CoffeesContexts";
 import { Minus, Plus, ShoppingCartSimple } from "phosphor-react";
 import { ButtonMinusAndPlus, InputChoiceQuantityCoffees } from "../../components/AmountButtonCoffeeAdd/styles";
-import { Footer } from "../../components/Footer";
  
 export function convertValueToCorrect(value: number) {
   const valueString = value.toString()
@@ -110,7 +109,6 @@ export function Home() {
           })}
         </CoffeeWrapper>
       </MainContainer>
-      <Footer />
     </HomeWrapper>
     
   )

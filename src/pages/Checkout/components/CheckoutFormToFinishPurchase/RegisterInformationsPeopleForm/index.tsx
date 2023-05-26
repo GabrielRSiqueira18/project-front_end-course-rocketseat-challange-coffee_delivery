@@ -1,4 +1,4 @@
-import { InputCheckoutWrapper, CepInputCheckout, StreetInputCheckout, NumberHouseInputCheckout, HouseComplementInputCheckout, NeighborhoodInputCheckout, CityInputCheckout, UFInputCheckout } from "./styles";
+import { InputCheckoutWrapper, CepInputCheckout, StreetInputCheckout, NumberHouseInputCheckout, NeighborhoodInputCheckout, CityInputCheckout, UFInputCheckout, NeighborhoodInputCheckoutWrapper, BaseInputCheckout } from "./styles";
 import { useFormContext } from "react-hook-form";
 
 export function RegisterInformationsPeopleForm() {
@@ -21,11 +21,18 @@ export function RegisterInformationsPeopleForm() {
         placeholder="Número"
         {...register("numberHouse")} 
       />
-      <HouseComplementInputCheckout
-        type="text"
-        placeholder="Complemento"
-        {...register("houseComplement")} 
-      />
+
+			<NeighborhoodInputCheckoutWrapper>
+			<BaseInputCheckout
+					type="text"
+					placeholder="Complemento"
+					{...register("houseComplement")} 
+				/>
+				<span>Opcional</span>
+			</NeighborhoodInputCheckoutWrapper>
+				
+			
+      
       <NeighborhoodInputCheckout
         type="text"
         placeholder="Bairro"

@@ -51,13 +51,24 @@ export const NumberHouseInputCheckout = styled(BaseInputCheckout)`
   grid-area: numberHouseInput;
 `;
 
-export const HouseComplementInputCheckout = styled(BaseInputCheckout)`
-  grid-area: houseComplementInput;
-`;
-
 export const NeighborhoodInputCheckout = styled(BaseInputCheckout)`
   grid-area: neighborhoodInput;
 `;
+
+export const NeighborhoodInputCheckoutWrapper = styled("div")`
+	position: relative;
+	grid-area: houseComplementInput;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	span {
+		right: 25px;
+		position: absolute;
+		color: ${props => props.theme["base-label"]};
+		font-size: 0.75rem;
+	}
+`
 
 export const CityInputCheckout = styled(BaseInputCheckout)`
   grid-area: cityInput;
