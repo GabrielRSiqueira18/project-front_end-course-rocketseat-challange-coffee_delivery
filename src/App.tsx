@@ -1,7 +1,7 @@
 import { ThemeProvider } from "styled-components"
 import { GlobalStyle } from "./styles/global"
 import { defaultTheme } from "./styles/themes/default"
-import { HashRouter } from "react-router-dom"
+import { BrowserRouter  } from "react-router-dom"
 import { Router } from "./Router"
 import { CoffeesContextsProvider } from "./contexts/CoffeesContexts"
 import { ButtonsActivesContextsProvider } from "./contexts/ButtonsActivesContexts"
@@ -10,7 +10,7 @@ function App() {
   
   return (
     <ThemeProvider theme={defaultTheme}>
-      < HashRouter>
+      <BrowserRouter >
         <CoffeesContextsProvider>
           <ButtonsActivesContextsProvider>
             <InformationsPeopleContextProvider>
@@ -19,7 +19,7 @@ function App() {
           </ButtonsActivesContextsProvider>
         </CoffeesContextsProvider>
         
-      </ HashRouter>
+      </ BrowserRouter >
       <GlobalStyle/>
     </ThemeProvider>
   )
