@@ -8,7 +8,7 @@
 [![Conclusão](https://img.shields.io/badge/Conclus%C3%A3o-100%25-green)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
 
 > Projeto criado para realizar o desafio da Rocketseat, desafio esse que consiste em desenvolver uma aplicação para vendas de cafés.
-> Foram usados as bibliotecas: 
+## Foram usados as bibliotecas: 
 
 `zod: Para validar formulários.` 
 
