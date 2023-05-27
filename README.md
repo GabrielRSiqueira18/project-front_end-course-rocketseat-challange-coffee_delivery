@@ -1,4 +1,7 @@
 # Coffee Delivery
-## Site created using React.
+## Site created using React
 
-![Badge](https://img.shields.io/badge/Blog-Rocketseat-%237159c1?style=for-the-badge&logo=ghost)
+[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=Naereen&theme=blue-green)](https://github.com/anuraghazra/github-readme-stats)
+
+
+
