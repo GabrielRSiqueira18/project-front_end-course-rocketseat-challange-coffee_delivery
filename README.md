@@ -1,12 +1,11 @@
+[![Estatísticas do GitHub](https://github-readme-stats.vercel.app/api?username=GabrielRSiqueira18&theme=blue-green)](https://github.com/anuraghazra/github-readme-stats)
+
 # Coffee Delivery
 ## Site created using React
 
 [![Versão](https://img.shields.io/badge/Vers%C3%A3o-1.0-blue)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
 [![Conclusão](https://img.shields.io/badge/Conclus%C3%A3o-70%25-yellow)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
 [![Pull Requests](https://img.shields.io/badge/Pull%20Requests-2%20abertos-orange)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2/pulls)
-
-[![Estatísticas do GitHub](https://github-readme-stats.vercel.app/api?username=GabrielRSiqueira18&theme=blue-green)](https://github.com/anuraghazra/github-readme-stats)
-
 
 > Uma breve descrição do seu projeto.
 
