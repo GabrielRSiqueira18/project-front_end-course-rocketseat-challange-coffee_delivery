@@ -1,6 +1,3 @@
-# Informações gerais do meu Github
-[![Estatísticas do GitHub](https://github-readme-stats.vercel.app/api?username=GabrielRSiqueira18&theme=blue-green)](https://github.com/GabrielRSiqueira18/github-readme-stats)
-
 # Coffee Delivery
 ## Site created using React
 
@@ -19,3 +16,7 @@
 `immer: Para facilitar as alterações do useReduzer() facilitando as alterações dos estados`
 
 [![Linguagens usadas](https://github-readme-stats.vercel.app/api/top-langs/?username=GabrielRSiqueira18&repo=coffee-delivery-desafio-2&layout=compact&theme=blue-green)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
+
+# Informações gerais do meu Github
+[![Estatísticas do GitHub](https://github-readme-stats.vercel.app/api?username=GabrielRSiqueira18&theme=blue-green)](https://github.com/GabrielRSiqueira18/github-readme-stats)
+
