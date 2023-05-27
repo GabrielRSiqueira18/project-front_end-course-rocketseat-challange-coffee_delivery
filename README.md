@@ -36,7 +36,7 @@
 
 ## Informações do Repositório
 
-![Linguagens](https://img.shields.io/github/languages/top/GabrielRSiqueira18/coffee-delivery-desafio-2.svg)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=GabrielRSiqueira18&hide_progress=true)](https://github.com/GabrielRSiqueira18/github-readme-stats)
 
 
 
