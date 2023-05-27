@@ -1,5 +1,6 @@
+# Portuguese
 # Coffee Delivery
-## Site created using React
+## Site criado usando React
 
 [![Versão](https://img.shields.io/badge/Vers%C3%A3o-1.0-blue)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
 [![Conclusão](https://img.shields.io/badge/Conclus%C3%A3o-100%25-green)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
@@ -17,6 +18,26 @@
 
 [![Linguagens usadas](https://github-readme-stats.vercel.app/api/top-langs/?username=GabrielRSiqueira18&repo=coffee-delivery-desafio-2&layout=compact&theme=blue-green)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
 
-# Informações gerais do meu Github
+#English
+# Coffee Delivery
+## Site created using React
+
+[![Versão](https://img.shields.io/badge/Vers%C3%A3o-1.0-blue)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
+[![Conclusão](https://img.shields.io/badge/Conclus%C3%A3o-100%25-green)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
+
+> Projct created for accomplish the challange by Rocketseat, this challange consisting in developing one aplication to sell coffees.
+## Libraries were used: 
+
+`zod: For validate forms` 
+
+`Styled-components: For create styleds components`
+
+`date-fns: For to use dates and manipulate a simple way`
+
+`immer: For facilitate the alterations in useReducer() facilitating the states changes`
+
+[![Linguagens usadas](https://github-readme-stats.vercel.app/api/top-langs/?username=GabrielRSiqueira18&repo=coffee-delivery-desafio-2&layout=compact&theme=blue-green)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
+
+# Generals informations my Github
 [![Estatísticas do GitHub](https://github-readme-stats.vercel.app/api?username=GabrielRSiqueira18&theme=blue-green)](https://github.com/GabrielRSiqueira18/github-readme-stats)
 
