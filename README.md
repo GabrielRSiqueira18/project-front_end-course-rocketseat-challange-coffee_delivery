@@ -16,7 +16,7 @@
 
 `immer: Para facilitar as alterações do useReduzer() facilitando as alterações dos estados`
 
-# Estatisticas das principais linguagens usadas no projeto
+## Estatisticas das principais linguagens usadas no projeto
 ![Linguagens](https://img.shields.io/github/languages/top/GabrielRSiqueira18/coffee-delivery-desafio-2.svg)
 
 ## English
@@ -37,7 +37,7 @@
 
 `immer: For facilitate the alterations in useReducer() facilitating the states changes`
 
-# Statistics about main languages useds in this project
+## Statistics about main languages useds in this project
 ![Linguagens](https://img.shields.io/github/languages/top/GabrielRSiqueira18/coffee-delivery-desafio-2.svg)
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=GabrielRSiqueira18&hide_progress=true&theme=dark&layout=compact&langs_count=6)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
