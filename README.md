@@ -12,11 +12,11 @@
 
 `zod: Para validar formulários.` 
 
-`Styled-components:` Parar criar componentes já estilizados.
+`Styled-components: Parar criar componentes já estilizados.`
 
-`date-fns:` Para usar datas e manipular de uma forma mais simples.
+`date-fns: Para usar datas e manipular de uma forma mais simples.`
 
-`immer:` Para facilitar as alterações do useReduzer() facilitando as alterações dos estados
+`immer: Para facilitar as alterações do useReduzer() facilitando as alterações dos estados`
 
 ## Status do Projeto
 
