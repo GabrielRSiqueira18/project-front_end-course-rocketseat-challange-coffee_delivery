@@ -16,6 +16,9 @@
 
 `immer: Para facilitar as alterações do useReduzer() facilitando as alterações dos estados`
 
+# Estatisticas das principais linguagens usadas no projeto
+![Linguagens](https://img.shields.io/github/languages/top/GabrielRSiqueira18/coffee-delivery-desafio-2.svg)
+
 ## English
 # Coffee Delivery
 ## Site created using React
@@ -34,10 +37,10 @@
 
 `immer: For facilitate the alterations in useReducer() facilitating the states changes`
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=GabrielRSiqueira18&hide_progress=true&theme=dark)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
-
-# Informations about repository languages
+# Statistics about main languages useds in this project
 ![Linguagens](https://img.shields.io/github/languages/top/GabrielRSiqueira18/coffee-delivery-desafio-2.svg)
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=GabrielRSiqueira18&hide_progress=true&theme=dark)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
 
 # Generals informations my Github
 [![Estatísticas do GitHub](https://github-readme-stats.vercel.app/api?username=GabrielRSiqueira18&theme=blue-green)](https://github.com/GabrielRSiqueira18/github-readme-stats)
