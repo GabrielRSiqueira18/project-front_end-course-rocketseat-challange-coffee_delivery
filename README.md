@@ -1,4 +1,4 @@
-# Portuguese
+## Portuguese
 # Coffee Delivery
 ## Site criado usando React
 
@@ -18,7 +18,7 @@
 
 [![Linguagens usadas](https://github-readme-stats.vercel.app/api/top-langs/?username=GabrielRSiqueira18&repo=coffee-delivery-desafio-2&layout=compact&theme=blue-green)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
 
-#English
+## English
 # Coffee Delivery
 ## Site created using React
 
