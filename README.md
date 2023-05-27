@@ -15,6 +15,8 @@
 
 ## Status do Projeto
 
+[![Estatísticas do Repositório](https://github-readme-stats.vercel.app/api/pin/?username=GabrielRSiqueira18&repo=coffee-delivery-desafio-2&theme=blue-green)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
+
 Este projeto está em andamento e atualmente está 70% concluído. Você pode verificar o progresso atual na seção de [Projetos](https://github.com/seu-usuario/seu-projeto/projects) deste repositório.
 
 ## Contribuição
