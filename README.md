@@ -9,7 +9,7 @@
 [![Pull Requests](https://img.shields.io/badge/Pull%20Requests-2%20abertos-orange)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2/pulls)
 [![Estatísticas do Projeto](https://img.shields.io/badge/Projeto-Estat%C3%ADsticas-brightgreen?style=flat-square)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
 
-[![Linguagem TypeScript](https://github-readme-stats.vercel.app/api/top-langs/?username=GabrielRSiqueira18&repo=coffee-delivery-desafio-2&layout=compact&theme=blue-green&hide=typescript](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
+[![Linguagem TypeScript](https://github-readme-stats.vercel.app/api/top-langs/?username=GabrielRSiqueira18&repo=coffee-delivery-desafio-2&layout=compact&theme=blue-green&hide=html,css,javascript)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
 
 > Uma breve descrição do seu projeto.
 
