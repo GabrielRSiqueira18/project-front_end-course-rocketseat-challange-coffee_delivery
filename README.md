@@ -36,11 +36,7 @@
 
 ## Informações do Repositório
 
-[![Harlok's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=GabrielRSiqueira18)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=GabrielRSiqueira18&hide_progress=true)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
-
-
-
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=GabrielRSiqueira18&hide_progress=true&theme=dark)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
 
 # Generals informations my Github
 [![Estatísticas do GitHub](https://github-readme-stats.vercel.app/api?username=GabrielRSiqueira18&theme=blue-green)](https://github.com/GabrielRSiqueira18/github-readme-stats)
