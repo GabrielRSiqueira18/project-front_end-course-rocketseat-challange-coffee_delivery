@@ -7,7 +7,12 @@
 [![Versão](https://img.shields.io/badge/Vers%C3%A3o-1.0-blue)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
 [![Conclusão](https://img.shields.io/badge/Conclus%C3%A3o-100%25-green)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
 
-> Uma breve descrição do seu projeto.
+> Projeto criado para realizar o desafio da Rocketseat, desafio esse que consiste em desenvolver uma aplicação para vendas de cafés.
+> Foram usados as bibliotecas: 
+> `zod: Para validar formulários.`
+> `Styled-components: Parar criar componentes já estilizados.`
+> `date-fns: Para usar datas e manipular de uma forma mais simples.`
+> `immer: Para facilitar as alterações do useReduzer() facilitando as alterações dos estados`
 
 ## Status do Projeto
 
