@@ -16,8 +16,6 @@
 
 `immer: Para facilitar as alterações do useReduzer() facilitando as alterações dos estados`
 
-[![Linguagens usadas](https://github-readme-stats.vercel.app/api/top-langs/?username=GabrielRSiqueira18&repo=coffee-delivery-desafio-2&layout=compact&theme=blue-green)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
-
 ## English
 # Coffee Delivery
 ## Site created using React
