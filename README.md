@@ -1,9 +1,6 @@
 # Informações gerais do meu Github
 [![Estatísticas do GitHub](https://github-readme-stats.vercel.app/api?username=GabrielRSiqueira18&theme=blue-green)](https://github.com/GabrielRSiqueira18/github-readme-stats)
 
-# Informações gerais de linguagens usadas no meu Github
-[![Principais Linguagens](https://github-readme-stats.vercel.app/api/top-langs/?username=GabrielRSiqueira18&repo=coffee-delivery-desafio-2&layout=compact&langs_count=6)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
-
 # Coffee Delivery
 ## Site created using React
 
@@ -12,7 +9,7 @@
 [![Pull Requests](https://img.shields.io/badge/Pull%20Requests-2%20abertos-orange)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2/pulls)
 [![Estatísticas do Projeto](https://img.shields.io/badge/Projeto-Estat%C3%ADsticas-brightgreen?style=flat-square)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
 
-[![Estatísticas do Repositório](https://github-readme-stats.vercel.app/api/pin/?username=GabrielRSiqueira18&repo=coffee-delivery-desafio-2&theme=blue-green)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
+[![Linguagem TypeScript](https://github-readme-stats.vercel.app/api/top-langs/?username=GabrielRSiqueira18&repo=coffee-delivery-desafio-2&layout=compact&theme=blue-green&hide=html,css,javascript)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
 
 > Uma breve descrição do seu projeto.
 
