@@ -34,8 +34,6 @@
 
 `immer: For facilitate the alterations in useReducer() facilitating the states changes`
 
-## Informações do Repositório
-
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=GabrielRSiqueira18&hide_progress=true&theme=dark)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
 
 # Generals informations my Github
