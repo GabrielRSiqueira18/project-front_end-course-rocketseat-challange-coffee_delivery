@@ -1,5 +1,5 @@
-[![Estatísticas do GitHub](https://github-readme-stats.vercel.app/api?username=GabrielRSiqueira18&theme=blue-green)](https://github.com/anuraghazra/github-readme-stats)
-[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=GabrielRSiqueira18&theme=blue-green)](https://github.com/GabrielRSiqueira18/github-readme-stats)
+[![Estatísticas do GitHub](https://github-readme-stats.vercel.app/api?username=GabrielRSiqueira18&theme=blue-green)](https://github.com/GabrielRSiqueira18/github-readme-stats)
+[![Gabriel top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=GabrielRSiqueira18&theme=blue-green)](https://github.com/GabrielRSiqueira18/github-readme-stats)
 
 # Coffee Delivery
 ## Site created using React
