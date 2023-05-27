@@ -2,6 +2,7 @@
 [![Estatísticas do GitHub](https://github-readme-stats.vercel.app/api?username=GabrielRSiqueira18&theme=blue-green)](https://github.com/GabrielRSiqueira18/github-readme-stats)
 
 # Informações gerais de linguagens usadas no meu Github
+[![Principais Linguagens](https://img.shields.io/github/languages/top/GabrielRSiqueira18/coffee-delivery-desafio-2?color=blue&style=flat-square)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
 
 # Coffee Delivery
 ## Site created using React
