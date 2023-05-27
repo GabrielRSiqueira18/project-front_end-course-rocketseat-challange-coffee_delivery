@@ -5,7 +5,7 @@
 ## Site created using React
 
 [![Versão](https://img.shields.io/badge/Vers%C3%A3o-1.0-blue)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
-[![Conclusão](https://img.shields.io/badge/Conclus%C3%A3o-70%25-yellow)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
+[![Conclusão](https://img.shields.io/badge/Conclus%C3%A3o-100%25-green)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
 [![Pull Requests](https://img.shields.io/badge/Pull%20Requests-2%20abertos-orange)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2/pulls)
 [![Estatísticas do Projeto](https://img.shields.io/badge/Projeto-Estat%C3%ADsticas-brightgreen?style=flat-square)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
 
