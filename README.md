@@ -18,5 +18,4 @@
 
 `immer: Para facilitar as alterações do useReduzer() facilitando as alterações dos estados`
 
-[![Estatísticas do Repositório](https://github-readme-stats.vercel.app/api/pin/?username=GabrielRSiqueira18&repo=coffee-delivery-desafio-2&theme=blue-green)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
-Descrição do repositório - uma breve explicação do que o projeto é ou faz.
+[![Linguagens usadas](https://github-readme-stats.vercel.app/api/top-langs/?username=GabrielRSiqueira18&repo=coffee-delivery-desafio-2&layout=compact&theme=blue-green)](https://github.com/GabrielRSiqueira18/coffee-delivery-desafio-2)
