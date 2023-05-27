@@ -36,11 +36,7 @@
 
 ## Informações do Repositório
 
-| Estatísticas     | Valores |
-|------------------|---------|
-| Estrelas         | ![Estrelas](https://img.shields.io/github/stars/GabrielRSiqueira18/coffee-delivery-desafio-2.svg) |
-| Forks            | ![Forks](https://img.shields.io/github/forks/GabrielRSiqueira18/coffee-delivery-desafio-2.svg) |
-| Observadores     | ![Observadores](https://img.shields.io/github/watchers/GabrielRSiqueira18/coffee-delivery-desafio-2.svg) |
+![Linguagens](https://img.shields.io/github/languages/top/GabrielRSiqueira18/coffee-delivery-desafio-2.svg)
 
 
 
